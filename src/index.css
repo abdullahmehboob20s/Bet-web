@@ -126,3 +126,7 @@
   grid-auto-flow: column;
   overflow-x: scroll;
 }
+
+.fix-lag {
+  transform: translate3d(0, 0, 0);
+}
