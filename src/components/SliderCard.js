@@ -6,7 +6,7 @@ function SliderCard() {
     <div className="min-w-[150px] slider-card rounded overflow-hidden group cursor-pointer">
       <img
         src="images/casino-img.gif"
-        className="slider-img transition-all duration-[.25s] group-hover:blur-[4px] z-10"
+        className="slider-img transition-all duration-[.25s] group-hover:blur-[4px] z-10 fix-lag"
         alt=""
       />
 
