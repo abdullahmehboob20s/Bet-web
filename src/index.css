@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --mobile-header-main-section-height: 49px;
+    --mobile-header-navigation-height: 40px;
+    --mobile-header-full-height: calc(
+      var(--mobile-header-main-section-height) +
+        var(--mobile-header-navigation-height)
+    );
+  }
+
+  * {
+    @apply text-white font-roboto;
+  }
+
+  body {
+    @apply bg-b text-white;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .container {
+    @apply px-7px;
+  }
+
+  .btn {
+    @apply bg-hero hover:bg-hero-hover px-2 transition-all duration-[.24s] rounded;
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
