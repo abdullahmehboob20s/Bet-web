@@ -8,6 +8,14 @@ module.exports = {
       black: "black",
       transparent: "transparent",
       gold: "var(--gold)",
+      "white-2": "rgba(255,255,255,.2)",
+      "white-3": "rgba(255,255,255,.3)",
+      "white-4": "rgba(255,255,255,.4)",
+      "white-5": "rgba(255,255,255,.5)",
+      "white-6": "rgba(255,255,255,.6)",
+      "white-7": "rgba(255,255,255,.7)",
+      "white-8": "rgba(255,255,255,.8)",
+      "white-9": "rgba(255,255,255,.9)",
 
       "dynamic-header": "var(--dynamic-header)",
       "window-height": "var(--window-height)",
@@ -83,6 +91,7 @@ module.exports = {
       },
       fontSize: {
         "10px": "10px",
+        "13px": "13px",
       },
       spacing: {
         "mobile-header-main-section-height":
