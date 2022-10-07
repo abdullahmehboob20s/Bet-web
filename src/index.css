@@ -67,7 +67,7 @@
   }
 
   body {
-    @apply bg-b text-white;
+    @apply bg-b text-white overflow-x-hidden;
   }
 }
 
@@ -92,4 +92,31 @@
 .jackpot-banner {
   position: relative;
   background: url(../public/images/jackpot-banner.png) no-repeat 0 0 / cover;
+}
+
+.slider-card {
+  width: 100%;
+  padding-top: 70%;
+  background: rgba(255, 255, 255, 0.1) no-repeat 50% / contain;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: -webkit-filter 0.24s;
+  transition: filter 0.24s;
+  transition: filter 0.24s, -webkit-filter 0.24s;
+}
+
+.games-horiz-scroll {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-flow: column;
+  overflow-x: scroll;
 }
