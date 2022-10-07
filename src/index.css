@@ -12,6 +12,54 @@
       var(--mobile-header-main-section-height) +
         var(--mobile-header-navigation-height)
     );
+
+    --window-height: 661px;
+    --gold: gold;
+    --hero: #a71f67;
+    --brand: #16c72e;
+    --secondary: #06a9aa;
+    --accent: #aa7f00;
+    --oc-1: #109121;
+    --oc-2: #ffd700;
+    --oc-3: #ff3449;
+    --odd-up: #16c72e;
+    --odd-down: #ff3449;
+    --b: #000c24;
+    --header: #000c24;
+    --menu: #000c24;
+    --tab-navigation: #000c24;
+    --hero-hover: #d22782;
+    --hero-sc: #ffffff;
+    --hero-sc-rgb: 255, 255, 255;
+    --hero-rgb: 167, 31, 103;
+    --brand-hover: #119923;
+    --brand-sc: #000000;
+    --brand-sc-rgb: 0, 0, 0;
+    --brand-rgb: 22, 199, 46;
+    --secondary-hover: #047879;
+    --secondary-sc: #000000;
+    --secondary-sc-rgb: 0, 0, 0;
+    --secondary-rgb: 6, 169, 170;
+    --accent-hover: #dda500;
+    --accent-sc: #ffffff;
+    --accent-sc-rgb: 255, 255, 255;
+    --accent-rgb: 170, 127, 0;
+    --oc-1-hover: #15bf2b;
+    --oc-1-sc: #ffffff;
+    --oc-1-sc-rgb: 255, 255, 255;
+    --oc-1-rgb: 16, 145, 33;
+    --oc-2-hover: #ccac00;
+    --oc-2-sc: #000000;
+    --oc-2-sc-rgb: 0, 0, 0;
+    --oc-2-rgb: 255, 215, 0;
+    --oc-3-hover: #ff6777;
+    --oc-3-sc: #ffffff;
+    --oc-3-sc-rgb: 255, 255, 255;
+    --oc-3-rgb: 255, 52, 73;
+    --odd-up-hover: #119923;
+    --odd-up-sc: #000000;
+    --odd-up-sc-rgb: 0, 0, 0;
+    --odd-up-rgb: 22, 199, 46;
   }
 
   * {
@@ -35,4 +83,9 @@
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.jackpot-banner {
+  position: relative;
+  background: url(../public/images/jackpot-banner.png) no-repeat 0 0 / cover;
 }
