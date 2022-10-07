@@ -89,9 +89,16 @@ module.exports = {
       fontFamily: {
         roboto: "'Roboto', sans-serif",
       },
+      borderWidth: {
+        "1px": "1px",
+      },
       fontSize: {
         "10px": "10px",
         "13px": "13px",
+      },
+      backgroundImage: {
+        instagram:
+          "radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)",
       },
       spacing: {
         "mobile-header-main-section-height":

@@ -1,6 +1,7 @@
 import Accordions from "layouts/Accordions";
 import Banner from "layouts/Banner";
 import CasinoGames from "layouts/CasinoGames";
+import Contact from "layouts/Contact";
 import Dropdowns from "layouts/Dropdowns";
 import FeaturedGames from "layouts/FeaturedGames";
 import Games from "layouts/Games";
@@ -34,7 +35,10 @@ function App() {
         <div className="mb-5">
           <Dropdowns />
         </div>
-        <Accordions />
+        <div className="mb-6">
+          <Accordions />
+        </div>
+        <Contact />
       </div>
     </div>
   );
