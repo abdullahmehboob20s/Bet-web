@@ -8,11 +8,12 @@ import Games from "layouts/Games";
 import Jackpot from "layouts/Jackpot";
 import LiveCasino from "layouts/LiveCasino";
 import Navbar from "layouts/Navbar";
+import Partners from "layouts/Partners";
 import Promotion from "layouts/Promotion";
 
 function App() {
   return (
-    <div className="pb-20">
+    <div className="pb-mobile-header-main-section-height">
       <Navbar />
       <div className="mt-mobile-header-full-height">
         <div className="mb-10px">
@@ -38,7 +39,16 @@ function App() {
         <div className="mb-6">
           <Accordions />
         </div>
-        <Contact />
+        <div className="mb-6">
+          <Contact />
+        </div>
+        <div className="mb-3">
+          <Partners />
+        </div>
+
+        <p className="text-center text-white-4 text-xs font-medium mb-3">
+          © 2003 - 2022 VBET
+        </p>
       </div>
     </div>
   );

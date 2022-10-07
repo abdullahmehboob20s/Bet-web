@@ -41,7 +41,7 @@ function Accordion({ title, children }) {
           <a
             target="_blank"
             rel="noreferrer"
-            class="h-[36px] text-sm font-bold text-white-5 block"
+            className="h-[36px] text-sm font-bold text-white-5 block"
             href="https://promo.vbet.com/en/about-us"
           >
             About us
@@ -49,7 +49,7 @@ function Accordion({ title, children }) {
           <a
             target="_blank"
             rel="noreferrer"
-            class="h-[36px] text-sm font-bold text-white-5 block"
+            className="h-[36px] text-sm font-bold text-white-5 block"
             href="https://www.vbet.group"
           >
             Vbet Group
@@ -57,7 +57,7 @@ function Accordion({ title, children }) {
           <a
             target="_blank"
             rel="noreferrer"
-            class="h-[36px] text-sm font-bold text-white-5 block"
+            className="h-[36px] text-sm font-bold text-white-5 block"
             href="https://www.vbet.group/vacancies"
           >
             Careers
@@ -65,7 +65,7 @@ function Accordion({ title, children }) {
           <a
             target="_blank"
             rel="noreferrer"
-            class="h-[36px] text-sm font-bold text-white-5 block"
+            className="h-[36px] text-sm font-bold text-white-5 block"
             href="https://www.vbetaffiliates.com"
           >
             Affiliation
@@ -73,7 +73,7 @@ function Accordion({ title, children }) {
           <a
             target="_blank"
             rel="noreferrer"
-            class="h-[36px] text-sm font-bold text-white-5 block"
+            className="h-[36px] text-sm font-bold text-white-5 block"
             href="https://www.vbetfranchise.com"
           >
             Franchising
