@@ -4,7 +4,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 function Navbar() {
   return (
     <div className="fixed top-0 left-0 w-full z-[100]">
-      <div className="h-mobile-header-main-section-height flex items-center bg-b border-2 border-[rgba(255,255,255,.05)]">
+      <div className="h-mobile-header-main-section-height flex items-center bg-b border-b-2 border-[rgba(255,255,255,.05)]">
         <div className="px-1 pr-4 flex items-center justify-between w-full">
           <div className="flex items-center space-x-3">
             <a className="logo" href="/en/">
