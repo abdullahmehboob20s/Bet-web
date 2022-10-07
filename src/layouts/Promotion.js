@@ -3,7 +3,7 @@ import React from "react";
 function Promotion() {
   return (
     <div>
-      <div className="container">
+      <div className="container-wrapper">
         <a href="/" className="rounded overflow-hidden block">
           <img src="images/promotion-banner.webp" className="w-full" alt="" />
         </a>

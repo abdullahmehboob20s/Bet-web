@@ -4,7 +4,7 @@ import React from "react";
 function Accordions() {
   return (
     <div>
-      <div className="container">
+      <div className="container-wrapper">
         <Accordion title="ABOUT"></Accordion>
         <Accordion title="HELP"></Accordion>
         <Accordion title="REDULATIONS"></Accordion>

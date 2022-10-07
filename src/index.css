@@ -72,7 +72,7 @@
 }
 
 @layer components {
-  .container {
+  .container-wrapper {
     @apply px-7px;
   }
 
@@ -91,7 +91,13 @@
 
 .jackpot-banner {
   position: relative;
-  background: url(../public/images/jackpot-banner.png) no-repeat 0 0 / cover;
+  background: url(../public/images/jackpot-banner.png) no-repeat 0 0 / cover,
+    radial-gradient(
+      circle at 49% 48%,
+      rgba(167, 31, 103, 0.7),
+      rgba(255, 255, 255, 0.05) 100%
+    ) !important;
+  z-index: 10;
 }
 
 .slider-card {

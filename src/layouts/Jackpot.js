@@ -9,9 +9,16 @@ function Jackpot() {
   const nextRef = useRef(null);
   return (
     <div>
-      <div className="container">
+      <div className="container-wrapper">
         <div className="py-18px rounded jackpot-banner z-10 relative">
-          <Slider slidesPerView={1} prevRef={prevRef} nextRef={nextRef}>
+          <Slider
+            slidesPerView={1}
+            options={{
+              loop: true,
+            }}
+            prevRef={prevRef}
+            nextRef={nextRef}
+          >
             <SwiperSlide>
               <JackpotCard />
             </SwiperSlide>

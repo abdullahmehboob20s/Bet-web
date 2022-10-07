@@ -18,7 +18,7 @@ function Banner() {
 
   return (
     <div className="pt-7px">
-      <div className="container">
+      <div className="container-wrapper">
         <div className="relative">
           <div className="text-[rgba(255,255,255,.9)] bg-[rgba(167,31,103,.7)] rounded absolute top-6px right-6px py-4px px-6px z-10 text-xs">
             {slideCount} / {slideData.length}

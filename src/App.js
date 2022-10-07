@@ -1,5 +1,6 @@
 import Accordions from "layouts/Accordions";
 import Banner from "layouts/Banner";
+import BottomBar from "layouts/BottomBar";
 import CasinoGames from "layouts/CasinoGames";
 import Contact from "layouts/Contact";
 import Dropdowns from "layouts/Dropdowns";
@@ -50,6 +51,7 @@ function App() {
           © 2003 - 2022 VBET
         </p>
       </div>
+      <BottomBar />
     </div>
   );
 }

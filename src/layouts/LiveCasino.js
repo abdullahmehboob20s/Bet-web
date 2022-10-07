@@ -3,7 +3,7 @@ import SliderSection from "./SliderSection";
 
 function LiveCasino() {
   return (
-    <div className="container">
+    <div className="container-wrapper">
       <SliderSection title="Live Casino" moreLink="/">
         <SliderCard />
         <SliderCard />

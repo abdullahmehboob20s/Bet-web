@@ -1,3 +1,4 @@
+import NavBannerLink from "components/NavBannerLink";
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
@@ -41,91 +42,19 @@ function Navbar() {
       </div>
 
       <div className="absolute top-mobile-header-main-section-height left-0 w-full h-mobile-header-navigation-height bg-menu flex items-center border-b-2 border-[rgba(255,255,255,.05)] overflow-x-scroll hide-scrollbar">
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/sports/live/event-view"
-        >
-          Live
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/sports/pre-match/event-view"
-        >
-          Sports
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/pinnacle"
-        >
-          Pinnacle
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/casino/slots"
-        >
-          Casino
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/live-casino/home"
-        >
-          Live Casino
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/page/casino/poker/28"
-        >
-          Poker
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          data-badge="New"
-          href="/en/casino/game-view/525"
-        >
-          Predictor
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/esports"
-        >
-          Esports
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/virtual-sports/betconstruct"
-        >
-          Virtual Sports
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/games"
-        >
-          Games
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/tv-games"
-        >
-          TV Games
-        </a>
-        <a
-          className="text-10px uppercase px-10px text-white opacity-80 tracking-[.1em] w-full whitespace-nowrap"
-          target="_self"
-          href="/en/promotions"
-        >
-          Promotions
-        </a>
+        <NavBannerLink title="Live" />
+        <NavBannerLink title="Sports" />
+        <NavBannerLink title="Pinnacle" />
+        <NavBannerLink title="Casino" />
+        <NavBannerLink title="Live Casino" />
+        <NavBannerLink title="Sport Tournaments" isNew={true} />
+        <NavBannerLink title="Poker" />
+        <NavBannerLink title="Predictor" isNew={true} />
+        <NavBannerLink title="Esports" />
+        <NavBannerLink title="Virtual Sports" />
+        <NavBannerLink title="Games" />
+        <NavBannerLink title="TV Games" />
+        <NavBannerLink title="Promotions" />
       </div>
     </div>
   );

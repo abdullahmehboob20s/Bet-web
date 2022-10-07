@@ -4,7 +4,7 @@ import React from "react";
 function Partners() {
   return (
     <div>
-      <div className="container">
+      <div className="container-wrapper">
         <div className="pb-3 border-b-1px border-white-2">
           <div className="flex items-center justify-center mb-4">
             <a href="/">

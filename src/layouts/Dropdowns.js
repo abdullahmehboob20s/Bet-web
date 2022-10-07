@@ -4,7 +4,7 @@ import React from "react";
 function Dropdowns() {
   return (
     <div>
-      <div className="container grid grid-cols-2 gap-2">
+      <div className="container-wrapper grid grid-cols-2 gap-2">
         <SelectBox />
         <SelectBox />
       </div>

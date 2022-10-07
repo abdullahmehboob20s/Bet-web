@@ -11,7 +11,7 @@ import {
 function Contact() {
   return (
     <div>
-      <div className="container">
+      <div className="container-wrapper">
         <div className="space-y-3 pb-3 border-b-[1px] border-white-2">
           <button className="w-full h-9 px-5 rounded bg-oc-1 transition-all duration-[.24s] flex items-center justify-center space-x-3 hover:bg-oc-1-hover text-sm font-medium uppercase">
             <RiLiveFill className="text-[1.2em]" />
