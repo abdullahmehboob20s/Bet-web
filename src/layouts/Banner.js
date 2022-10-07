@@ -37,7 +37,7 @@ function Banner() {
             }}
           >
             {slideData.map((item, index) => (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <a href={item.link} className="block w-full">
                   <img src={item.img} className="w-full rounded" alt="" />
                 </a>
