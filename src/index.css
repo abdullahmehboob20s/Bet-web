@@ -79,6 +79,10 @@
   .btn {
     @apply bg-hero hover:bg-hero-hover px-2 transition-all duration-[.24s] rounded;
   }
+
+  .heading {
+    @apply text-13px uppercase text-white opacity-80 font-semibold;
+  }
 }
 
 .hide-scrollbar::-webkit-scrollbar {
