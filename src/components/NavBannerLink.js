@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavBannerLink({ title, link = "/", target = "_self", isNew = false }) {
   return (
-    <a
+    <Link
+      to={link}
       className="text-10px uppercase px-10px tracking-[.1em] w-full whitespace-nowrap text-center"
       target={target}
-      href={link}
     >
       <span className="relative h-full block text-white-8">
         {title}
@@ -15,7 +16,7 @@ function NavBannerLink({ title, link = "/", target = "_self", isNew = false }) {
           </span>
         )}
       </span>
-    </a>
+    </Link>
   );
 }
 
