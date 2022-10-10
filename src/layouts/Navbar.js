@@ -1,6 +1,7 @@
 import NavBannerLink from "components/NavBannerLink";
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Navbar(props) {
   const { NavbarBottomContent } = props;
@@ -10,13 +11,13 @@ function Navbar(props) {
       <div className="h-mobile-header-main-section-height flex items-center bg-b border-b-2 border-[rgba(255,255,255,.05)]">
         <div className="px-1 pr-4 flex items-center justify-between w-full">
           <div className="flex items-center space-x-3">
-            <a className="logo" href="/en/">
+            <Link className="logo" to="/">
               <img
                 className="max-w-[100px]"
                 src="https://cmsbetconstruct.com/storage/medias/vbet/media_4_e78a4ffd98a54aa7f8225fcb13f555ea.gif?v=10/06/2022-16:31"
                 alt=""
               />
-            </a>
+            </Link>
             <a
               target="_self"
               className="h-6 w-6 block"
@@ -43,7 +44,7 @@ function Navbar(props) {
         </div>
       </div>
 
-      <div className="absolute top-mobile-header-main-section-height left-0 w-full h-mobile-header-navigation-height bg-menu flex items-center border-b-2 border-[rgba(255,255,255,.05)] overflow-x-scroll hide-scrollbar">
+      <div className="absolute top-mobile-header-main-section-height left-0 w-full h-mobile-header-navigation-height">
         {NavbarBottomContent && <NavbarBottomContent />}
       </div>
     </div>
