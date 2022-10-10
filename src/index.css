@@ -60,6 +60,7 @@
     --odd-up-sc: #000000;
     --odd-up-sc-rgb: 0, 0, 0;
     --odd-up-rgb: 22, 199, 46;
+    --header-sc-rgb: 255, 255, 255;
   }
 
   * {
