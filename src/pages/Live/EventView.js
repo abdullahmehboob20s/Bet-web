@@ -1,6 +1,7 @@
 import JackpotCard from "components/JackpotCard";
 import JackPotWrapper from "components/JackPotWrapper";
 import FilterBar from "layouts/EventView/FilterBar";
+import WinnerDisplayer from "layouts/EventView/WinnerDisplayer";
 import SportsCardList from "layouts/SportsCardList";
 import React from "react";
 
@@ -17,6 +18,9 @@ function EventView() {
       </div>
       <div className="mb-10px">
         <SportsCardList />
+      </div>
+      <div className="mb-10px">
+        <WinnerDisplayer />
       </div>
     </div>
   );
