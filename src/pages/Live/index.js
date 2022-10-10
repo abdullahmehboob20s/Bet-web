@@ -1,20 +1,24 @@
+import LivePageLinks from "components/LivePageLinks";
+import Layout from "layouts/Layout";
 import React, { useEffect } from "react";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, useMatch } from "react-router-dom";
 
 function Index() {
-  const location = useLocation();
   const navigate = useNavigate();
+  const isLivePage = useMatch("/live");
 
   useEffect(() => {
-    if (location.pathname === "/live") {
+    if (isLivePage) {
       navigate("event-view", { replace: true });
     }
-  }, [navigate, location]);
+  }, [isLivePage, navigate]);
 
   return (
-    <div>
-      <Outlet />
-    </div>
+    <Layout navbarProps={{ NavbarBottomContent: LivePageLinks }}>
+      <div className="pt-7px mb-6">
+        <Outlet />
+      </div>
+    </Layout>
   );
 }
 
