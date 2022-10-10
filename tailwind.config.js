@@ -105,6 +105,7 @@ module.exports = {
       },
       fontSize: {
         "10px": "10px",
+        "11px": "11px",
         "13px": "13px",
       },
       backgroundImage: {
@@ -133,6 +134,9 @@ module.exports = {
         "13px": "13px",
         "14px": "14px",
         "18px": "18px",
+      },
+      lineHeight: {
+        1: 1,
       },
     },
   },
