@@ -13,13 +13,14 @@ function SelectBox({
   titleClassName = "absolute top-[8px] text-xs text-white-4",
   fromLeft = "pl-[15px]",
   children,
+  fontSize = "text-sm",
 }) {
   return (
     <label
       className={`${height} flex items-center rounded overflow-hidden relative cursor-pointer ${bg}`}
     >
       <select
-        className={`w-full h-full outline-none flex-col appearance-none text-white-9 cursor-pointer text-sm border-none pb-0 ${paddingTop} ${fromLeft} pr-[15px] bg-transparent`}
+        className={`w-full h-full outline-none flex-col appearance-none text-white-9 cursor-pointer ${fontSize} border-none pb-0 ${paddingTop} ${fromLeft} pr-[15px] bg-transparent`}
       >
         {options &&
           options.map((item, index) => (
