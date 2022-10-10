@@ -13,8 +13,8 @@ function Dropdowns() {
   return (
     <div>
       <div className="container-wrapper grid grid-cols-2 gap-2">
-        <SelectBox options={options} />
-        <SelectBox options={options} />
+        <SelectBox title="Language" options={options} />
+        <SelectBox title="Language" options={options} />
       </div>
     </div>
   );
