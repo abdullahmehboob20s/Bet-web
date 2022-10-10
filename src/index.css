@@ -61,6 +61,7 @@
     --odd-up-sc-rgb: 0, 0, 0;
     --odd-up-rgb: 22, 199, 46;
     --header-sc-rgb: 255, 255, 255;
+    --b-rgb: 0, 12, 36;
   }
 
   * {
@@ -83,6 +84,10 @@
 
   .heading {
     @apply text-13px uppercase text-white opacity-80 font-semibold;
+  }
+
+  .center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
 }
 
