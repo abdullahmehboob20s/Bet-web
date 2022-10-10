@@ -4,7 +4,7 @@ import NavBannerLink from "./NavBannerLink";
 
 function NavbarLinks() {
   return (
-    <>
+    <div className="flex items-center overflow-x-scroll hide-scrollbar h-full">
       {navbarLinksData.map((item, index) => (
         <NavBannerLink
           key={index}
@@ -14,7 +14,7 @@ function NavbarLinks() {
           target={item.target}
         />
       ))}
-    </>
+    </div>
   );
 }
 
