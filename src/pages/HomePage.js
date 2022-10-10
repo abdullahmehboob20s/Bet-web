@@ -11,7 +11,7 @@ import Promotion from "layouts/Promotion";
 function HomePage() {
   return (
     <Layout navbarProps={{ NavbarBottomContent: NavbarLinks }}>
-      <div className="mb-10px">
+      <div className="mb-10px pt-7px">
         <Banner />
       </div>
       <div className="mb-10px">
