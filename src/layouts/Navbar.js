@@ -2,7 +2,9 @@ import NavBannerLink from "components/NavBannerLink";
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
-function Navbar() {
+function Navbar(props) {
+  const { NavbarBottomContent } = props;
+
   return (
     <div className="fixed top-0 left-0 w-full z-[100]">
       <div className="h-mobile-header-main-section-height flex items-center bg-b border-b-2 border-[rgba(255,255,255,.05)]">
@@ -42,19 +44,7 @@ function Navbar() {
       </div>
 
       <div className="absolute top-mobile-header-main-section-height left-0 w-full h-mobile-header-navigation-height bg-menu flex items-center border-b-2 border-[rgba(255,255,255,.05)] overflow-x-scroll hide-scrollbar">
-        <NavBannerLink title="Live" />
-        <NavBannerLink title="Sports" />
-        <NavBannerLink title="Pinnacle" />
-        <NavBannerLink title="Casino" />
-        <NavBannerLink title="Live Casino" />
-        <NavBannerLink title="Sport Tournaments" isNew={true} />
-        <NavBannerLink title="Poker" />
-        <NavBannerLink title="Predictor" isNew={true} />
-        <NavBannerLink title="Esports" />
-        <NavBannerLink title="Virtual Sports" />
-        <NavBannerLink title="Games" />
-        <NavBannerLink title="TV Games" />
-        <NavBannerLink title="Promotions" />
+        {NavbarBottomContent && <NavbarBottomContent />}
       </div>
     </div>
   );
