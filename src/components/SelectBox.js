@@ -1,17 +1,37 @@
 import { IoIosArrowDown } from "react-icons/io";
 
-function SelectBox({ options, showDropdownIcon = true }) {
+const BG = "bg-[rgba(255,255,255,0.15)]";
+const HEIGHT = "h-[52px]";
+
+function SelectBox({
+  options,
+  showDropdownIcon = true,
+  title,
+  bg = BG,
+  height = HEIGHT,
+  paddingTop = "pt-6",
+  titleClassName = "absolute top-[8px] text-xs text-white-4",
+  fromLeft = "pl-[15px]",
+  children,
+}) {
   return (
-    <label className="h-[52px] flex items-center rounded overflow-hidden relative cursor-pointer bg-[rgba(255,255,255,0.15)]">
-      <select className="w-full h-full outline-none flex-col appearance-none text-white-9 cursor-pointer text-sm border-none pb-0 pt-6 px-[15px] bg-transparent">
-        {options.map((item, index) => (
-          <option className="bg-b" value={item.value}>
-            {item.title}
-          </option>
-        ))}
+    <label
+      className={`${height} flex items-center rounded overflow-hidden relative cursor-pointer ${bg}`}
+    >
+      <select
+        className={`w-full h-full outline-none flex-col appearance-none text-white-9 cursor-pointer text-sm border-none pb-0 ${paddingTop} ${fromLeft} pr-[15px] bg-transparent`}
+      >
+        {options &&
+          options.map((item, index) => (
+            <option className="bg-b" value={item.value}>
+              {item.title}
+            </option>
+          ))}
       </select>
-      <span className="pointer-events-none select-none text-white-4 absolute top-[8px] left-[15px] text-xs">
-        Language
+      <span
+        className={`pointer-events-none select-none ${fromLeft} ${titleClassName}`}
+      >
+        {title && title}
       </span>
 
       {showDropdownIcon && (
@@ -19,6 +39,8 @@ function SelectBox({ options, showDropdownIcon = true }) {
           <IoIosArrowDown />
         </button>
       )}
+
+      {children && children}
     </label>
   );
 }
