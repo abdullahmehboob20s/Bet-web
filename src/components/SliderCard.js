@@ -5,7 +5,7 @@ function SliderCard() {
   return (
     <div className="min-w-[150px] slider-card rounded overflow-hidden group cursor-pointer">
       <img
-        src="images/casino-img.gif"
+        src="https://cmsbetconstruct.com/content/images/casino/icon2/4f4c1882d26c0dee36f9816a2e0aa820_casinoGameIcon2.webp"
         className="slider-img transition-all duration-[.25s] group-hover:blur-[4px] z-10 fix-lag"
         alt=""
       />
