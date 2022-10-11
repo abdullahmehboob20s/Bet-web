@@ -111,6 +111,8 @@ module.exports = {
       backgroundImage: {
         flags: "url('/public/images/flags.png')",
         "blue-to-purple": "linear-gradient(270deg,#8d17c7,#031778)",
+        "yellow-gradient":
+          "linear-gradient(111deg,rgba(255,184,0,.25) 1%,rgba(255,184,0,.7) 53%,rgba(255,184,0,.25) 99%);",
         instagram:
           "radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)",
       },
