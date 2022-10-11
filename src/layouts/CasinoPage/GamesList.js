@@ -1,57 +1,53 @@
 import SportCard from "components/SportCard";
 import React, { useState } from "react";
-import { FaTableTennis, FaVolleyballBall } from "react-icons/fa";
-import { IoIosTennisball, IoMdBasketball } from "react-icons/io";
-import { IoFootball } from "react-icons/io5";
+import { BsFillGiftFill, BsFillGrid3X3GapFill } from "react-icons/bs";
+import { FaTrophy } from "react-icons/fa";
+import { GiElectric } from "react-icons/gi";
+import { AiFillDollarCircle } from "react-icons/ai";
 
-function SportsCardList() {
+function GamesList() {
   const [data, setData] = useState([
     {
-      id: "7",
-      color: "#109121",
-      title: "Football",
-      Icon: IoFootball,
-      iconSize: "text-4xl",
+      id: "1",
+      title: "All Games",
       isSelected: false,
+      Icon: BsFillGrid3X3GapFill,
+      iconSize: "text-2xl",
+    },
+    {
+      id: "2",
+      title: "SLOTS FOR BONUSES",
+      isSelected: false,
+      Icon: BsFillGiftFill,
+      iconSize: "text-2xl",
+    },
+    {
+      id: "3",
+      title: "Popular Games",
+      isSelected: false,
+      Icon: FaTrophy,
+      iconSize: "text-2xl",
     },
     {
       id: "4",
-      color: "#fca601",
-      title: "Basketball",
-      Icon: IoMdBasketball,
-      iconSize: "text-4xl",
+      title: "NEW",
       isSelected: false,
+      Icon: GiElectric,
+      iconSize: "text-3xl",
     },
     {
-      id: "12",
-      title: "Tennis",
-      color: "#a19e3e",
-      Icon: IoIosTennisball,
-      iconSize: "text-4xl",
+      id: "5",
+      title: "Buy Bonus",
       isSelected: false,
-    },
-    {
-      id: "14",
-      title: "Table Tenis",
-      color: "#839d24",
-      Icon: FaTableTennis,
+      Icon: AiFillDollarCircle,
       iconSize: "text-2xl",
-      isSelected: false,
-    },
-    {
-      id: "8",
-      title: "Volleyball",
-      color: "#dac179",
-      Icon: FaVolleyballBall,
-      iconSize: "text-2xl",
-      isSelected: false,
     },
   ]);
 
   const changeSelected = (id) => {
     const newData = data.map((item) => {
       if (item.id == id) {
-        return { ...item, isSelected: true };
+        return { ...item, isSelected: item.isSelected ? false : true };
       } else {
         return { ...item, isSelected: false };
       }
@@ -59,7 +55,6 @@ function SportsCardList() {
 
     setData(newData);
   };
-
   return (
     <div>
       <div className="container-wrapper flex overflow-x-scroll hide-scrollbar space-x-2">
@@ -67,9 +62,11 @@ function SportsCardList() {
           <SportCard
             key={index}
             id={item.id}
-            color={item.color}
-            title={item.title}
+            showId={false}
             onClick={changeSelected}
+            color="rgba(255,255,255,.5)"
+            selectedBgColor="#A71F67"
+            title={item.title}
             isSelected={item.isSelected}
             Icon={(props) => <item.Icon className={item.iconSize} {...props} />}
           />
@@ -79,4 +76,4 @@ function SportsCardList() {
   );
 }
 
-export default SportsCardList;
+export default GamesList;

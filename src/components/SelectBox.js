@@ -24,7 +24,7 @@ function SelectBox({
       >
         {options &&
           options.map((item, index) => (
-            <option className="bg-b" value={item.value}>
+            <option key={index} className="bg-b" value={item.value}>
               {item.title}
             </option>
           ))}

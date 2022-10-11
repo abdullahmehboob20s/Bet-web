@@ -93,6 +93,10 @@
   .stats_wrapper > :not(:last-child) {
     @apply pr-2 border-r-1px border-r-b;
   }
+
+  .slider-horizontal-cards-wrapper {
+    @apply games-horiz-scroll gap-3 hide-scrollbar;
+  }
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -134,7 +138,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-auto-flow: column;
-  overflow-x: scroll;
 }
 
 .fix-lag {

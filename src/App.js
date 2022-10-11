@@ -8,7 +8,8 @@ import HomePage from "pages/HomePage";
 import Live from "pages/Live";
 import EventView from "pages/Live/EventView";
 import Sports from "pages/Sports";
-import Casino from "pages/Casino";
+import Casino from "pages/Casino/Casino";
+import Home from "pages/Casino/Home";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="sports" element={<Sports />} />
-        <Route path="casino" element={<Casino />} />
+        <Route path="casino" element={<Casino />}>
+          <Route index element={<Home />} />
+        </Route>
         <Route path="live" element={<Live />}>
           <Route index element={<EventView />} />
           <Route path="event-view" element={<EventView />} />
