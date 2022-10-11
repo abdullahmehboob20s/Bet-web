@@ -8,6 +8,7 @@ module.exports = {
       black: "black",
       transparent: "transparent",
       gold: "var(--gold)",
+      inherit: "inherit",
 
       "white-01": "rgba(255,255,255,.01)",
       "white-02": "rgba(255,255,255,.02)",
@@ -108,6 +109,7 @@ module.exports = {
         "11px": "11px",
         "13px": "13px",
       },
+
       backgroundImage: {
         flags: "url('/public/images/flags.png')",
         "blue-to-purple": "linear-gradient(270deg,#8d17c7,#031778)",
