@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function livePageLink(props) {
+function LivePageLink(props) {
   const { title, link = "/", target = "_self" } = props;
   return (
     <NavLink
@@ -20,4 +20,4 @@ function livePageLink(props) {
   );
 }
 
-export default livePageLink;
+export default LivePageLink;

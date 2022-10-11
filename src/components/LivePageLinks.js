@@ -1,6 +1,6 @@
 import React from "react";
 import livePageLinksData from "assets/data/live-page-links-data";
-import LivePageLink from "./livePageLink";
+import LivePageLink from "./LivePageLink";
 
 function LivePageLinks() {
   return (

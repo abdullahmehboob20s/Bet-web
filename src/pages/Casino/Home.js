@@ -8,7 +8,7 @@ import Jackpot from "layouts/Jackpot";
 function Home() {
   return (
     <>
-      <div className="mb-10px pt-7px">
+      <div className="mb-10px">
         <Banner />
       </div>
       <div className="mb-6">

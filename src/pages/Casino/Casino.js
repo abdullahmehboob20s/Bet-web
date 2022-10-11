@@ -7,9 +7,7 @@ function Casino() {
   return (
     <Layout navbarProps={{ NavbarBottomContent: CasinoPageLinks }}>
       <div className="pt-7px mb-6">
-        <div className="pt-7px mb-6">
-          <Outlet />
-        </div>
+        <Outlet />
       </div>
     </Layout>
   );

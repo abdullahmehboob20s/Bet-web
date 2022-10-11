@@ -1,5 +1,5 @@
 import React from "react";
-import LivePageLink from "./livePageLink";
+import LivePageLink from "./LivePageLink";
 import casinoPageLinks from "assets/data/casino-page-links-data";
 
 function CasinoPageLinks() {
