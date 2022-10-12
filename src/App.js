@@ -9,25 +9,32 @@ import PrivacyPolicy from "pages/PrivacyPolicy";
 import { useEffect } from "react";
 import FAQ from "pages/FAQ";
 import SignInModal from "layouts/SignInModal";
+import { useSelector } from "react-redux";
+import useDelayUnmount from "hooks/useDelayUnmount";
 
 function App() {
   const location = useLocation();
   const background = location.state && location.state.background;
+  const { isOpen } = useSelector((state) => state.signInModalState);
+  const shouldRenderChild = useDelayUnmount(isOpen, 1000);
 
   useEffect(() => {
     if (
       location.pathname === "/privacy-policy" ||
-      location.pathname === "/faq"
+      location.pathname === "/faq" ||
+      isOpen
     ) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = "scroll";
     }
-  }, [location.pathname]);
+  }, [location.pathname, isOpen]);
 
   return (
     <div>
-      <SignInModal />
+      {shouldRenderChild && (
+        <SignInModal className={isOpen ? "fade-in" : "fade-out"} />
+      )}
 
       <Routes location={background || location}>
         <Route index element={<HomePage />} />
