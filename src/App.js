@@ -8,6 +8,7 @@ import Home from "pages/Casino/Home";
 import PrivacyPolicy from "pages/PrivacyPolicy";
 import { useEffect } from "react";
 import FAQ from "pages/FAQ";
+import SignInModal from "layouts/SignInModal";
 
 function App() {
   const location = useLocation();
@@ -26,6 +27,8 @@ function App() {
 
   return (
     <div>
+      <SignInModal />
+
       <Routes location={background || location}>
         <Route index element={<HomePage />} />
         <Route path="sports" element={<Sports />} />

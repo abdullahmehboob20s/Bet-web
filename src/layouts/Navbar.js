@@ -4,7 +4,13 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
-  const { NavbarBottomContent } = props;
+  const {
+    NavbarBottomContent,
+    showDropdown = true,
+    showSignInButton = true,
+    showRegisterButton = true,
+    NavbarRightComponent,
+  } = props;
 
   return (
     <div className="fixed top-0 left-0 w-full z-[100]">
@@ -32,14 +38,22 @@ function Navbar(props) {
           </div>
 
           <div className="flex items-center space-x-3">
-            <button className="text-xs text-white uppercase underline">
-              Sign in
-            </button>
-            <button className="btn text-xs uppercase h-7">Register</button>
+            {showSignInButton && (
+              <button className="text-xs text-white uppercase underline">
+                Sign in
+              </button>
+            )}
+            {showRegisterButton && (
+              <button className="btn text-xs uppercase h-7">Register</button>
+            )}
 
-            <button className="w-7 h-7 rounded-full flex items-center justify-center bg-[rgba(255,255,255,.1)] text-[rgba(255,255,255,.8)] text-xl">
-              <BsThreeDotsVertical />
-            </button>
+            {showDropdown && (
+              <button className="w-7 h-7 rounded-full flex items-center justify-center bg-[rgba(255,255,255,.1)] text-[rgba(255,255,255,.8)] text-xl">
+                <BsThreeDotsVertical />
+              </button>
+            )}
+
+            {NavbarRightComponent && <NavbarRightComponent />}
           </div>
         </div>
       </div>

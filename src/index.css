@@ -97,6 +97,12 @@
   .slider-horizontal-cards-wrapper {
     @apply games-horiz-scroll gap-3 hide-scrollbar;
   }
+
+  input.floating-label:focus ~ label,
+  input.floating-label:not(:placeholder-shown) ~ label {
+    @apply transform;
+    @apply -translate-y-[10px];
+  }
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -238,6 +244,29 @@
   border-top-color: transparent;
   -webkit-animation: odds-arrow-animation-change 7s forwards;
   animation: odds-arrow-animation-change 7s forwards;
+}
+
+/* CHECKBOX */
+
+.checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox input[type="checkbox"]::before {
+  content: "\2713";
+  font-size: 12px;
+  color: white;
+  transition: all 0.25s ease;
+  scale: 0;
+}
+.checkbox input[type="checkbox"]:checked:before {
+  scale: 1;
 }
 
 /* FLAGS */
