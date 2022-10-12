@@ -1,7 +1,8 @@
-import NavBannerLink from "components/NavBannerLink";
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { toggleSignInModal } from "redux/signInModalState";
 
 function Navbar(props) {
   const {
@@ -11,6 +12,7 @@ function Navbar(props) {
     showRegisterButton = true,
     NavbarRightComponent,
   } = props;
+  const dispatch = useDispatch();
 
   return (
     <div className="fixed top-0 left-0 w-full z-[100]">
@@ -39,7 +41,10 @@ function Navbar(props) {
 
           <div className="flex items-center space-x-3">
             {showSignInButton && (
-              <button className="text-xs text-white uppercase underline">
+              <button
+                className="text-xs text-white uppercase underline"
+                onClick={() => dispatch(toggleSignInModal())}
+              >
                 Sign in
               </button>
             )}
