@@ -23,7 +23,11 @@ function Accordions() {
     <div>
       <div className="container-wrapper">
         <Accordion title="ABOUT"></Accordion>
-        <Accordion title="HELP"></Accordion>
+        <Accordion title="HELP">
+          <div className="space-y-3 mb-4">
+            <Anchor to="/faq" title="FAQ" state={{ background: location }} />
+          </div>
+        </Accordion>
         <Accordion title="REDULATIONS">
           <div className="space-y-3 mb-4">
             <Anchor to="/" title="General Terms and Conditions" />

@@ -7,13 +7,17 @@ import Casino from "pages/Casino/Casino";
 import Home from "pages/Casino/Home";
 import PrivacyPolicy from "pages/PrivacyPolicy";
 import { useEffect } from "react";
+import FAQ from "pages/FAQ";
 
 function App() {
   const location = useLocation();
   const background = location.state && location.state.background;
 
   useEffect(() => {
-    if (location.pathname === "/privacy-policy") {
+    if (
+      location.pathname === "/privacy-policy" ||
+      location.pathname === "/faq"
+    ) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = "scroll";
@@ -36,9 +40,14 @@ function App() {
       </Routes>
 
       {background && (
-        <Routes>
-          <Route path="privacy-policy" element={<PrivacyPolicy />} />
-        </Routes>
+        <>
+          <Routes>
+            <Route path="faq" element={<FAQ />} />
+          </Routes>
+          <Routes>
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          </Routes>
+        </>
       )}
     </div>
   );
