@@ -9,9 +9,7 @@ function ButtonSelector({ title, color, Icon, isSelected = false }) {
       style={{ backgroundColor: isSelected ? color : BG }}
     >
       {Icon && <Icon style={{ fill: isSelected ? "white" : color }} />}
-      <span className="text-xs font-medium text-white-9 whitespace-nowrap">
-        {title}
-      </span>
+      <span className="text-xs text-white-9 whitespace-nowrap">{title}</span>
     </button>
   );
 }

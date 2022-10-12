@@ -13,6 +13,9 @@ import ButtonSelector from "components/ButtonSelector";
 import { FaTrophy } from "react-icons/fa";
 import { BsCalendarCheckFill, BsLightningFill } from "react-icons/bs";
 import { IoIosSpeedometer } from "react-icons/io";
+import CompetitionCard from "components/CompetitionCard";
+import AccordionButton from "components/AccordionButton";
+import { BiStar } from "react-icons/bi";
 
 function Sports() {
   return (
@@ -92,6 +95,101 @@ function Sports() {
 
         <div className="mb-10px">
           <SportsCardList />
+        </div>
+
+        <div className="space-y-1">
+          <CompetitionCard
+            open={false}
+            title="Europe"
+            className="bg-white-1"
+            titleFontSize="text-sm"
+            countryName="europe"
+          >
+            <div className="mb-3 space-y-2">
+              {new Array(6).fill("").map((item, index) => (
+                <AccordionButton
+                  key={index}
+                  title="UEFA Champions League"
+                  iconRotation="-90deg"
+                  className="bg-white-1 rounded px-10px h-[36px]"
+                  ButtonLeftComponent={() => (
+                    <button className="flex pr-6px mr-3 border-r-1px border-r-b">
+                      <BiStar className="text-xl fill-white-7" />
+                    </button>
+                  )}
+                />
+              ))}
+            </div>
+          </CompetitionCard>
+          <CompetitionCard
+            open={false}
+            title="Spain"
+            countryName="spain"
+            className="bg-white-1"
+            titleFontSize="text-sm"
+          >
+            <div className="mb-3 space-y-2">
+              {new Array(6).fill("").map((item, index) => (
+                <AccordionButton
+                  key={index}
+                  title="UEFA Champions League"
+                  iconRotation="-90deg"
+                  className="bg-white-1 rounded px-10px h-[36px]"
+                  ButtonLeftComponent={() => (
+                    <button className="flex pr-6px mr-3 border-r-1px border-r-b">
+                      <BiStar className="text-xl fill-white-7" />
+                    </button>
+                  )}
+                />
+              ))}
+            </div>
+          </CompetitionCard>
+          <CompetitionCard
+            open={false}
+            title="Germany"
+            countryName="germany"
+            className="bg-white-1"
+            titleFontSize="text-sm"
+          >
+            <div className="mb-3 space-y-2">
+              {new Array(6).fill("").map((item, index) => (
+                <AccordionButton
+                  key={index}
+                  title="UEFA Champions League"
+                  iconRotation="-90deg"
+                  className="bg-white-1 rounded px-10px h-[36px]"
+                  ButtonLeftComponent={() => (
+                    <button className="flex pr-6px mr-3 border-r-1px border-r-b">
+                      <BiStar className="text-xl fill-white-7" />
+                    </button>
+                  )}
+                />
+              ))}
+            </div>
+          </CompetitionCard>
+          <CompetitionCard
+            open={false}
+            title="Brazil"
+            countryName="brazil"
+            className="bg-white-1"
+            titleFontSize="text-sm"
+          >
+            <div className="mb-3 space-y-2">
+              {new Array(6).fill("").map((item, index) => (
+                <AccordionButton
+                  key={index}
+                  title="UEFA Champions League"
+                  iconRotation="-90deg"
+                  className="bg-white-1 rounded px-10px h-[36px]"
+                  ButtonLeftComponent={() => (
+                    <button className="flex pr-6px mr-3 border-r-1px border-r-b">
+                      <BiStar className="text-xl fill-white-7" />
+                    </button>
+                  )}
+                />
+              ))}
+            </div>
+          </CompetitionCard>
         </div>
       </div>
     </Layout>

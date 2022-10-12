@@ -13,12 +13,11 @@ function WinnerDisplayer() {
       <div className="container-wrapper flex items-center h-[28px]">
         <div className="flex-1 pr-[35px]">
           <SelectBox
-            height="h-auto w-full"
-            paddingTop="pt-[2px]"
-            fromLeft="pl-10px"
-            options={options}
             bg="bg-white-05"
-            fontSize="text-xs"
+            options={options}
+            wrapperClassName="h-auto w-full"
+            selectBoxClassName="pl-10px pb-0 pt-[2px] text-white-9 text-xs flex flex-col"
+            downIconClassName="top-1/2 -translate-y-1/2 right-3 text-base"
           />
         </div>
         <div className="border-l-1px border-l-b w-[179px] flex items-center">

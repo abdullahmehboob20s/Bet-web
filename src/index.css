@@ -239,3 +239,38 @@
   -webkit-animation: odds-arrow-animation-change 7s forwards;
   animation: odds-arrow-animation-change 7s forwards;
 }
+
+/* FLAGS */
+.europe {
+  background-position: 0 28.7197231834%;
+}
+.england {
+  background-position: 0 26.9896193772%;
+}
+.egypt {
+  background-position: 0 26.2975778547%;
+}
+.brazil {
+  background-position: 0 12.8027681661%;
+}
+.germany {
+  background-position: 0 33.2179930796%;
+}
+.spain {
+  background-position: 0 83.044982699%;
+}
+.italy {
+  background-position: 0 43.9446366782%;
+}
+.brazil {
+  background-position: 0 12.8027681661%;
+}
+.netherlands {
+  background-position: 0 60.553633218%;
+}
+.africa {
+  background-position: 0 0.6920415225%;
+}
+.belarus {
+  background-position: 0 8.9965397924%;
+}

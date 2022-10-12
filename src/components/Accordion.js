@@ -36,49 +36,7 @@ function Accordion({ title, children }) {
         className="h-0 overflow-hidden transition-all duration-[.3s]"
         ref={accordionMenuRef}
       >
-        <div className="pt-4">
-          {/* {children} */}
-          <a
-            target="_blank"
-            rel="noreferrer"
-            className="h-[36px] text-sm font-bold text-white-5 block"
-            href="https://promo.vbet.com/en/about-us"
-          >
-            About us
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            className="h-[36px] text-sm font-bold text-white-5 block"
-            href="https://www.vbet.group"
-          >
-            Vbet Group
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            className="h-[36px] text-sm font-bold text-white-5 block"
-            href="https://www.vbet.group/vacancies"
-          >
-            Careers
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            className="h-[36px] text-sm font-bold text-white-5 block"
-            href="https://www.vbetaffiliates.com"
-          >
-            Affiliation
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            className="h-[36px] text-sm font-bold text-white-5 block"
-            href="https://www.vbetfranchise.com"
-          >
-            Franchising
-          </a>
-        </div>
+        <div className="pt-4">{children}</div>
       </div>
     </div>
   );
