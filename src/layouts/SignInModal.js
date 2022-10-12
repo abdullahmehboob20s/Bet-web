@@ -3,7 +3,7 @@ import Input from "components/Input";
 import React from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleSignInModal } from "redux/signInModalState";
 import Navbar from "./Navbar";
