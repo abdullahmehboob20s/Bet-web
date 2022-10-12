@@ -16,7 +16,7 @@ function App() {
   const location = useLocation();
   const background = location.state && location.state.background;
   const { isOpen } = useSelector((state) => state.signInModalState);
-  const shouldRenderChild = useDelayUnmount(isOpen, 1000);
+  const shouldSignModalRender = useDelayUnmount(isOpen, 1000);
 
   useEffect(() => {
     if (
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div>
-      {shouldRenderChild && (
+      {shouldSignModalRender && (
         <SignInModal className={isOpen ? "fade-in" : "fade-out"} />
       )}
 
