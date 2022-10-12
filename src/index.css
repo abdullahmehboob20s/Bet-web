@@ -103,6 +103,10 @@
     @apply transform;
     @apply -translate-y-[10px];
   }
+
+  .vertical-position-center {
+    @apply top-1/2 -translate-y-1/2;
+  }
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -267,6 +271,33 @@
 }
 .checkbox input[type="checkbox"]:checked:before {
   scale: 1;
+}
+
+/* ANIMATIONS */
+
+.fade-in {
+  animation: fadeIn 0.25s;
+}
+
+.fade-out {
+  animation: fadeOut 0.25s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* FLAGS */
