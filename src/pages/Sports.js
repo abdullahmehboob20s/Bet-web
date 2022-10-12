@@ -113,9 +113,9 @@ function Sports() {
                   iconRotation="-90deg"
                   className="bg-white-1 rounded px-10px h-[36px]"
                   ButtonLeftComponent={() => (
-                    <button className="flex pr-6px mr-3 border-r-1px border-r-b">
+                    <span className="flex pr-6px mr-3 border-r-1px border-r-b cursor-pointer">
                       <BiStar className="text-xl fill-white-7" />
-                    </button>
+                    </span>
                   )}
                 />
               ))}
@@ -136,9 +136,9 @@ function Sports() {
                   iconRotation="-90deg"
                   className="bg-white-1 rounded px-10px h-[36px]"
                   ButtonLeftComponent={() => (
-                    <button className="flex pr-6px mr-3 border-r-1px border-r-b">
+                    <span className="flex pr-6px mr-3 border-r-1px border-r-b cursor-pointer">
                       <BiStar className="text-xl fill-white-7" />
-                    </button>
+                    </span>
                   )}
                 />
               ))}
@@ -159,9 +159,9 @@ function Sports() {
                   iconRotation="-90deg"
                   className="bg-white-1 rounded px-10px h-[36px]"
                   ButtonLeftComponent={() => (
-                    <button className="flex pr-6px mr-3 border-r-1px border-r-b">
+                    <span className="flex pr-6px mr-3 border-r-1px border-r-b cursor-pointer">
                       <BiStar className="text-xl fill-white-7" />
-                    </button>
+                    </span>
                   )}
                 />
               ))}
@@ -182,9 +182,9 @@ function Sports() {
                   iconRotation="-90deg"
                   className="bg-white-1 rounded px-10px h-[36px]"
                   ButtonLeftComponent={() => (
-                    <button className="flex pr-6px mr-3 border-r-1px border-r-b">
+                    <span className="flex pr-6px mr-3 border-r-1px border-r-b cursor-pointer">
                       <BiStar className="text-xl fill-white-7" />
-                    </button>
+                    </span>
                   )}
                 />
               ))}
