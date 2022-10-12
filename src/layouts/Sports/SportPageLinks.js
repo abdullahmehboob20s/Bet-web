@@ -1,12 +1,12 @@
 import React from "react";
 import sportsPageLinks from "assets/data/sports-page-links-data";
-import LivePageLink from "components/LivePageLink";
+import PageLink from "components/PageLink";
 
 function SportsPageLinks() {
   return (
     <div className="h-full flex bg-menu">
       {sportsPageLinks.map((item, index) => (
-        <LivePageLink
+        <PageLink
           key={index}
           title={item.title}
           link={item.link}

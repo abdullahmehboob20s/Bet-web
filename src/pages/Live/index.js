@@ -14,7 +14,7 @@ function Index() {
   }, [isLivePage, navigate]);
 
   return (
-    <Layout navbarProps={{ NavbarBottomContent: LivePageLinks }}>
+    <Layout>
       <div className="pt-7px mb-6">
         <Outlet />
       </div>

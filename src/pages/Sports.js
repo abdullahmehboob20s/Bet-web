@@ -1,7 +1,6 @@
 import Layout from "layouts/Layout";
 import JackpotCard from "components/JackpotCard";
 import JackPotWrapper from "components/JackPotWrapper";
-import SportsPageLinks from "layouts/Sports/SportPageLinks";
 import FilterButton from "components/FilterButton";
 import { AiFillCloud } from "react-icons/ai";
 import SearchBar from "components/SearchBar";
@@ -19,7 +18,8 @@ import { BiStar } from "react-icons/bi";
 
 function Sports() {
   return (
-    <Layout navbarProps={{ NavbarBottomContent: SportsPageLinks }}>
+    //  navbarProps={{ NavbarBottomContent: SportsPageLinks }}
+    <Layout>
       <div className="pt-7px mb-6">
         <div className="mb-4">
           <JackPotWrapper>

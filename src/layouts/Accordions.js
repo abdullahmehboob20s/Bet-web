@@ -22,7 +22,12 @@ function Accordions() {
   return (
     <div>
       <div className="container-wrapper">
-        <Accordion title="ABOUT"></Accordion>
+        <Accordion title="ABOUT">
+          <div className="space-y-3 mb-4">
+            <Anchor to="/faq" title="About us" />
+            <Anchor to="/faq" title="Affiliation" />
+          </div>
+        </Accordion>
         <Accordion title="HELP">
           <div className="space-y-3 mb-4">
             <Anchor to="/faq" title="FAQ" state={{ background: location }} />
@@ -30,7 +35,6 @@ function Accordions() {
         </Accordion>
         <Accordion title="REDULATIONS">
           <div className="space-y-3 mb-4">
-            <Anchor to="/" title="General Terms and Conditions" />
             <Anchor
               to="/privacy-policy"
               title="Privacy Policy"
@@ -38,8 +42,8 @@ function Accordions() {
             />
           </div>
         </Accordion>
-        <Accordion title="GAMING RULES"></Accordion>
-        <Accordion title="STATISTICS"></Accordion>
+        {/* <Accordion title="GAMING RULES"></Accordion>
+        <Accordion title="STATISTICS"></Accordion> */}
       </div>
     </div>
   );

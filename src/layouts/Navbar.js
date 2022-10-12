@@ -44,9 +44,11 @@ function Navbar(props) {
         </div>
       </div>
 
-      <div className="absolute top-mobile-header-main-section-height left-0 w-full h-mobile-header-navigation-height">
-        {NavbarBottomContent && <NavbarBottomContent />}
-      </div>
+      {NavbarBottomContent && (
+        <div className="absolute top-mobile-header-main-section-height left-0 w-full h-mobile-header-navigation-height">
+          <NavbarBottomContent />
+        </div>
+      )}
     </div>
   );
 }

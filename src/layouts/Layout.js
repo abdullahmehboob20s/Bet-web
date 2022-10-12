@@ -7,7 +7,13 @@ function Layout({ children, navbarProps }) {
   return (
     <div className="pb-mobile-header-main-section-height">
       <Navbar {...navbarProps} />
-      <div className="mt-mobile-header-full-height">
+      <div
+        className={`${
+          navbarProps?.NavbarBottomContent
+            ? "mt-mobile-header-full-height"
+            : "mt-mobile-header-main-section-height"
+        }`}
+      >
         {children}
         <Footer />
       </div>
