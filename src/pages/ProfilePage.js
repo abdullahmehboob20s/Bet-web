@@ -1,6 +1,7 @@
 import Account from "components/Account";
 import BalanceCard from "components/BalanceCard";
 import ProfileCard from "components/ProfileCard";
+import Slider from "components/Slider";
 import User from "components/User";
 import Layout from "layouts/Layout";
 import PromoCode from "layouts/ProfilePage/PromoCode";
@@ -11,6 +12,10 @@ import { IoMdMail } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { MdAccountBalance } from "react-icons/md";
 import { Link } from "react-router-dom";
+import SwiperCore, { EffectCoverflow } from "swiper";
+import { SwiperSlide } from "swiper/react";
+
+SwiperCore.use([EffectCoverflow]);
 
 const CloseModalBtn = () => {
   return (
@@ -34,7 +39,21 @@ function ProfilePage() {
     >
       <div className="pt-3">
         <div className="container-wrapper mb-5">
-          <BalanceCard />
+          <Slider
+            slidesPerView={1.2}
+            spaceBetween={0}
+            options={{
+              centeredSlides: true,
+              className: "balance-slider",
+            }}
+          >
+            <SwiperSlide>
+              <BalanceCard bg="#109121" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BalanceCard bg="#aa7f00" />
+            </SwiperSlide>
+          </Slider>
         </div>
 
         <div className="mb-4">
