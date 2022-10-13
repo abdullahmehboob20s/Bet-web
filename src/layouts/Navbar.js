@@ -2,6 +2,7 @@ import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { toggleRegisterModal } from "redux/registerModalState";
 import { toggleSignInModal } from "redux/signInModalState";
 
 function Navbar(props) {
@@ -13,6 +14,20 @@ function Navbar(props) {
     NavbarRightComponent,
   } = props;
   const dispatch = useDispatch();
+
+  const toggleModal = (type) => {
+    if (type === "signin") {
+      dispatch(toggleSignInModal(true));
+      dispatch(toggleRegisterModal(false));
+      console.log("signin");
+    }
+
+    if (type === "register") {
+      console.log("register");
+      dispatch(toggleRegisterModal(true));
+      dispatch(toggleSignInModal(false));
+    }
+  };
 
   return (
     <div className="fixed top-0 left-0 w-full z-[100]">
@@ -43,13 +58,18 @@ function Navbar(props) {
             {showSignInButton && (
               <button
                 className="text-xs text-white uppercase underline"
-                onClick={() => dispatch(toggleSignInModal())}
+                onClick={() => toggleModal("signin")}
               >
                 Sign in
               </button>
             )}
             {showRegisterButton && (
-              <button className="btn text-xs uppercase h-7">Register</button>
+              <button
+                className="btn text-xs uppercase h-7"
+                onClick={() => toggleModal("register")}
+              >
+                Register
+              </button>
             )}
 
             {showDropdown && (
