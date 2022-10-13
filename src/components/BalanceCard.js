@@ -6,12 +6,15 @@ import { MdTakeoutDining } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { toogleVisibility } from "redux/balanceVisibilityState";
 
-function BalanceCard() {
+function BalanceCard({ bg }) {
   const { visible } = useSelector((state) => state.balanceVisibilityState);
   const dispatch = useDispatch();
 
   return (
-    <div className="glass-effect relative z-20 bg-[#109121] pt-5 pb-4 px-4 rounded overflow-hidden">
+    <div
+      className="glass-effect relative z-20 pt-5 pb-4 px-4 rounded overflow-hidden"
+      style={{ backgroundColor: bg }}
+    >
       <AiFillDollarCircle className="text-[5rem] absolute top-[-20px] right-[-22px] -z-10 opacity-10" />
 
       <div className="flex items-center justify-between mb-3">
