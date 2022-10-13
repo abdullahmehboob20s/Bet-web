@@ -14,7 +14,7 @@ const CloseModalBtn = () => {
   return (
     <button
       className="flex text-2xl"
-      onClick={() => dispatch(toggleSignInModal())}
+      onClick={() => dispatch(toggleSignInModal(false))}
     >
       <IoClose className="fill-white-6" />
     </button>
