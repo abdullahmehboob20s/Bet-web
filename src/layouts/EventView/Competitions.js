@@ -8,30 +8,50 @@ function Competitions() {
         title="Europe"
         subtitle="U19 UEFA European Championship - Women"
         countryName="europe"
+        accordionButtonClassName="container-wrapper h-[36px]"
+        className="bg-white-1"
       >
-        <CompetitionSegment />
-        <CompetitionSegment isVideo={false} />
+        <div className="container-wrapper space-y-2 pb-2">
+          <CompetitionSegment />
+          <CompetitionSegment isVideo={false} />
+        </div>
       </CompetitionCard>
       <CompetitionCard
         title="England"
         subtitle="Professional Development League"
         countryName="england"
+        accordionButtonClassName="container-wrapper h-[36px]"
+        className="bg-white-1"
       >
-        <CompetitionSegment isChart={false} />
+        <div className="container-wrapper space-y-2 pb-2">
+          <CompetitionSegment isChart={false} />
+        </div>
       </CompetitionCard>
       <CompetitionCard
         title="Italy"
         subtitle="Campionato Primavera 1"
         countryName="italy"
+        accordionButtonClassName="container-wrapper h-[36px]"
+        className="bg-white-1"
       >
-        <CompetitionSegment isChart={false} isVideo={false} />
+        <div className="container-wrapper space-y-2 pb-2">
+          <CompetitionSegment isChart={false} isVideo={false} />
+        </div>
       </CompetitionCard>
       <CompetitionCard
         title="Egypt"
         subtitle="International Friendlies - Women"
         countryName="egypt"
+        accordionButtonClassName="container-wrapper h-[36px]"
+        className="bg-white-1"
       >
-        <CompetitionSegment isChart={false} isVideo={false} twoColumns={true} />
+        <div className="container-wrapper space-y-2 pb-2">
+          <CompetitionSegment
+            isChart={false}
+            isVideo={false}
+            twoColumns={true}
+          />
+        </div>
       </CompetitionCard>
     </div>
   );

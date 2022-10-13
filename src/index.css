@@ -300,6 +300,54 @@
   }
 }
 
+/* REACT DATE PICKER */
+
+.react-datepicker__tab-loop .react-datepicker {
+  background: var(--b);
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.react-datepicker__tab-loop .react-datepicker__header {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.react-datepicker__tab-loop .react-datepicker__day,
+.react-datepicker__tab-loop .react-datepicker__day-name,
+.react-datepicker__tab-loop .react-datepicker__time-name {
+  color: white;
+}
+
+.react-datepicker__tab-loop .react-datepicker__day--disabled,
+.react-datepicker__tab-loop .react-datepicker__month-text--disabled,
+.react-datepicker__tab-loop .react-datepicker__quarter-text--disabled,
+.react-datepicker__tab-loop .react-datepicker__year-text--disabled {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.react-datepicker__tab-loop .react-datepicker__day--in-range,
+.react-datepicker__tab-loop .react-datepicker__day--in-selecting-range,
+.react-datepicker__tab-loop .react-datepicker__day--keyboard-selected,
+.react-datepicker__tab-loop .react-datepicker__day--selected,
+.react-datepicker__tab-loop .react-datepicker__month-text--in-range,
+.react-datepicker__tab-loop .react-datepicker__month-text--in-selecting-range,
+.react-datepicker__tab-loop .react-datepicker__month-text--keyboard-selected,
+.react-datepicker__tab-loop .react-datepicker__month-text--selected,
+.react-datepicker__tab-loop .react-datepicker__quarter-text--in-range,
+.react-datepicker__tab-loop .react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__tab-loop .react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__tab-loop .react-datepicker__quarter-text--selected,
+.react-datepicker__tab-loop .react-datepicker__year-text--in-range,
+.react-datepicker__tab-loop .react-datepicker__year-text--in-selecting-range,
+.react-datepicker__tab-loop .react-datepicker__year-text--keyboard-selected,
+.react-datepicker__tab-loop .react-datepicker__year-text--selected {
+  color: var(--hero-sc) !important;
+  background: var(--hero) !important;
+}
+
 /* FLAGS */
 .europe {
   background-position: 0 28.7197231834%;

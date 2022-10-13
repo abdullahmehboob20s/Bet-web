@@ -12,6 +12,8 @@ function CompetitionCard({
   className = "bg-white-1 pb-2",
   titleFontSize,
   iconRotation,
+  ButtonLeftComponent,
+  accordionButtonClassName,
 }) {
   const [isAccordionOpen, setIsAccordion] = useState(open);
   const accordionMenuRef = useRef(null);
@@ -27,28 +29,33 @@ function CompetitionCard({
 
   return (
     <div className={className}>
-      <div className="container-wrapper">
-        <AccordionButton
-          title={title}
-          subtitle={subtitle}
-          AccordionState={isAccordionOpen}
-          AccordionSetter={setIsAccordion}
-          titleFontSize={titleFontSize && titleFontSize}
-          iconRotation={iconRotation && iconRotation}
-          ButtonLeftComponent={() => (
-            <FlagBox
-              countryName={countryName && countryName}
-              className="mr-3"
-            />
-          )}
-        />
+      <AccordionButton
+        className={accordionButtonClassName && accordionButtonClassName}
+        title={title}
+        subtitle={subtitle}
+        AccordionState={isAccordionOpen}
+        AccordionSetter={setIsAccordion}
+        titleFontSize={titleFontSize && titleFontSize}
+        iconRotation={iconRotation && iconRotation}
+        ButtonLeftComponent={
+          ButtonLeftComponent
+            ? ButtonLeftComponent
+            : countryName
+            ? () => (
+                <FlagBox
+                  countryName={countryName && countryName}
+                  className="mr-3"
+                />
+              )
+            : null
+        }
+      />
 
-        <div
-          className="h-0 overflow-hidden transition-all duration-[.3s]"
-          ref={accordionMenuRef}
-        >
-          <div className="pt-2 space-y-2">{children}</div>
-        </div>
+      <div
+        className="h-0 overflow-hidden transition-all duration-[.3s]"
+        ref={accordionMenuRef}
+      >
+        <div className="pt-2 space-y-2">{children}</div>
       </div>
     </div>
   );

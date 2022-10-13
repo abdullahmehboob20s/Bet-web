@@ -99,13 +99,14 @@ function Sports() {
 
         <div className="space-y-1">
           <CompetitionCard
+            accordionButtonClassName={"container-wrapper h-[36px]"}
             open={false}
             title="Europe"
             className="bg-white-1"
             titleFontSize="text-sm"
             countryName="europe"
           >
-            <div className="mb-3 space-y-2">
+            <div className="container-wrapper mb-3 space-y-2">
               {new Array(6).fill("").map((item, index) => (
                 <AccordionButton
                   key={index}
@@ -122,13 +123,14 @@ function Sports() {
             </div>
           </CompetitionCard>
           <CompetitionCard
+            accordionButtonClassName={"container-wrapper h-[36px]"}
             open={false}
             title="Spain"
             countryName="spain"
             className="bg-white-1"
             titleFontSize="text-sm"
           >
-            <div className="mb-3 space-y-2">
+            <div className="container-wrapper mb-3 space-y-2">
               {new Array(6).fill("").map((item, index) => (
                 <AccordionButton
                   key={index}
@@ -145,13 +147,14 @@ function Sports() {
             </div>
           </CompetitionCard>
           <CompetitionCard
+            accordionButtonClassName={"container-wrapper h-[36px]"}
             open={false}
             title="Germany"
             countryName="germany"
             className="bg-white-1"
             titleFontSize="text-sm"
           >
-            <div className="mb-3 space-y-2">
+            <div className="container-wrapper mb-3 space-y-2">
               {new Array(6).fill("").map((item, index) => (
                 <AccordionButton
                   key={index}
@@ -168,13 +171,14 @@ function Sports() {
             </div>
           </CompetitionCard>
           <CompetitionCard
+            accordionButtonClassName={"container-wrapper h-[36px]"}
             open={false}
             title="Brazil"
             countryName="brazil"
             className="bg-white-1"
             titleFontSize="text-sm"
           >
-            <div className="mb-3 space-y-2">
+            <div className="container-wrapper mb-3 space-y-2">
               {new Array(6).fill("").map((item, index) => (
                 <AccordionButton
                   key={index}

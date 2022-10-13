@@ -42,8 +42,9 @@ function Accordions() {
             />
           </div>
         </Accordion>
-        {/* <Accordion title="GAMING RULES"></Accordion>
-        <Accordion title="STATISTICS"></Accordion> */}
+        <Accordion title="STATISTICS">
+          <Anchor to="/results" title="Results" />
+        </Accordion>
       </div>
     </div>
   );

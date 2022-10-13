@@ -12,21 +12,31 @@ function SelectBox({
   selectBoxClassName = "pl-[15px] pb-0 pt-6 text-white-9 text-sm flex flex-col",
   wrapperClassName = "h-[52px]",
   downIconClassName = "top-1/2 -translate-y-1/2 right-5 text-base",
+  Component,
+  overflowHidden = true,
 }) {
   return (
     <label
-      className={`flex items-center rounded overflow-hidden relative cursor-pointer ${bg} ${wrapperClassName}`}
+      className={`flex items-center rounded relative cursor-pointer ${bg} ${wrapperClassName}`}
+      style={{ overflow: overflowHidden ? "hidden" : "visible" }}
     >
-      <select
-        className={`w-full h-full outline-none appearance-none cursor-pointer border-none bg-transparent ${selectBoxClassName}`}
-      >
-        {options &&
-          options.map((item, index) => (
-            <option key={index} className="bg-b" value={item.value}>
-              {item.title}
-            </option>
-          ))}
-      </select>
+      {Component ? (
+        <Component
+          className={`w-full h-full outline-none appearance-none cursor-pointer border-none bg-transparent ${selectBoxClassName}`}
+        />
+      ) : (
+        <select
+          className={`w-full h-full outline-none appearance-none cursor-pointer border-none bg-transparent ${selectBoxClassName}`}
+        >
+          {options &&
+            options.map((item, index) => (
+              <option key={index} className="bg-b" value={item.value}>
+                {item.title}
+              </option>
+            ))}
+        </select>
+      )}
+
       <span className={`pointer-events-none select-none ${titleClassName}`}>
         {title && title}
       </span>
