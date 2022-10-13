@@ -13,6 +13,7 @@ import { useSelector } from "react-redux";
 import useDelayUnmount from "hooks/useDelayUnmount";
 import RegisterModal from "layouts/RegisterModal";
 import ResultsPage from "pages/ResultsPage";
+import ProfilePage from "pages/ProfilePage";
 
 function App() {
   const location = useLocation();
@@ -53,6 +54,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="sports" element={<Sports />} />
           <Route path="results" element={<ResultsPage />} />
+          <Route path="profile" element={<ProfilePage />} />
           <Route path="casino" element={<Casino />}>
             <Route index element={<Home />} />
           </Route>

@@ -348,6 +348,38 @@
   background: var(--hero) !important;
 }
 
+.user-profile-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  z-index: -1;
+  background-image: radial-gradient(
+    circle at -14% 113%,
+    rgba(0, 0, 0, 0.65),
+    transparent 120%
+  );
+}
+
+.glass-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  z-index: -1;
+  background: radial-gradient(
+    circle at -14% 113%,
+    hsla(0, 0%, 100%, 0.3),
+    hsla(0, 0%, 100%, 0) 135%
+  );
+}
+
 /* FLAGS */
 .europe {
   background-position: 0 28.7197231834%;

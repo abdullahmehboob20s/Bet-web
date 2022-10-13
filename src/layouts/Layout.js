@@ -3,9 +3,14 @@ import BottomBar from "./BottomBar";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-function Layout({ children, navbarProps }) {
+function Layout({
+  children,
+  navbarProps,
+  showFooter = true,
+  showBottomBar = true,
+}) {
   return (
-    <div className="pb-mobile-header-main-section-height">
+    <div className={showBottomBar && "pb-mobile-header-main-section-height"}>
       <Navbar {...navbarProps} />
       <div
         className={`${
@@ -15,9 +20,10 @@ function Layout({ children, navbarProps }) {
         }`}
       >
         {children}
-        <Footer />
+        {showFooter && <Footer />}
       </div>
-      <BottomBar />
+
+      {showBottomBar && <BottomBar />}
     </div>
   );
 }
