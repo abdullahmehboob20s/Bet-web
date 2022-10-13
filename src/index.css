@@ -348,6 +348,19 @@
   background: var(--hero) !important;
 }
 
+/* SWIPER */
+
+.balance-slider .swiper-slide {
+  transform: scale(0.9) !important;
+  transition: all 0.3s ease !important;
+}
+
+.balance-slider .swiper-slide-active {
+  transform: scale(1) !important;
+}
+
+/* EFFECTS */
+
 .user-profile-icon::before {
   content: "";
   position: absolute;
