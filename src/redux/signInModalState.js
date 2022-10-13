@@ -8,8 +8,8 @@ export const signInModalState = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    toggleSignInModal: (state) => {
-      state.isOpen = !state.isOpen;
+    toggleSignInModal: (state, action) => {
+      state.isOpen = action.payload;
     },
   },
 });
