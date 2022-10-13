@@ -8,11 +8,30 @@ import { FaHistory } from "react-icons/fa";
 import { GiExtraTime, GiJourney } from "react-icons/gi";
 import { HiUserCircle } from "react-icons/hi";
 import { IoMdMail } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
 import { MdAccountBalance } from "react-icons/md";
+import { Link } from "react-router-dom";
+
+const CloseModalBtn = () => {
+  return (
+    <Link to="/" className="flex text-2xl">
+      <IoClose className="fill-white-6" />
+    </Link>
+  );
+};
 
 function ProfilePage() {
   return (
-    <Layout showFooter={false} showBottomBar={false}>
+    <Layout
+      showFooter={false}
+      showBottomBar={false}
+      navbarProps={{
+        showDropdown: false,
+        showSignInButton: false,
+        showRegisterButton: false,
+        NavbarRightComponent: CloseModalBtn,
+      }}
+    >
       <div className="pt-3">
         <div className="container-wrapper mb-5">
           <BalanceCard />
