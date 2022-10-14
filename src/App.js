@@ -1,7 +1,6 @@
 import ReactDOM from "react-dom";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "pages/HomePage";
-import Live from "pages/Live";
 import EventView from "pages/Live/EventView";
 import Sports from "pages/Sports";
 import Casino from "pages/Casino/Casino";

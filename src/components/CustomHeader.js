@@ -26,8 +26,6 @@ function CustomHeader({
     "December",
   ];
 
-  console.log(new Date(date).getFullYear());
-
   return (
     <div className="flex items-center justify-between px-2">
       <button

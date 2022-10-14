@@ -22,11 +22,9 @@ function Navbar(props) {
     if (type === "signin") {
       dispatch(toggleSignInModal(true));
       dispatch(toggleRegisterModal(false));
-      console.log("signin");
     }
 
     if (type === "register") {
-      console.log("register");
       dispatch(toggleRegisterModal(true));
       dispatch(toggleSignInModal(false));
     }
