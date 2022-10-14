@@ -7,7 +7,7 @@ import Vision from "layouts/AboutUs/Vision";
 
 function AboutUs() {
   return (
-    <div className="min-h-screen bg-light-white text-black pb-20">
+    <div className="min-h-screen bg-light-white text-black pb-20 overflow-x-hidden">
       <div className="container-2 h-screen max-h-[380px] xl:max-h-[520px]">
         <h1 className="text-5xl md:text-5xl lg:text-6xl xl:text-[84px] font-bebas text-pink font-bold italic pt-8 text-center">
           WE ARE VBET. <br className="block md:hidden" /> THIS IS OUR STORY
