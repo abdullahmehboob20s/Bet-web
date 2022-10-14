@@ -43,7 +43,7 @@ function VerticalDropdown() {
           <div className="absolute top-[-6px] right-[12px] -z-20 w-[12px] h-[12px] bg-white-2 rotate-45"></div>
 
           {/*  */}
-          <div className="overflow-y-auto overflow-x-hidden h-full z-20 bg-header">
+          <div className="overflow-y-auto overflow-x-hidden h-full z-20 bg-header rounded">
             <IconButton>
               <GiJourney className="text-xl fill-white-8" />
             </IconButton>
