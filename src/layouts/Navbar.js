@@ -1,6 +1,5 @@
 import VerticalDropdown from "components/VerticalDropdown";
 import React from "react";
-import { BsThreeDotsVertical } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleRegisterModal } from "redux/registerModalState";
