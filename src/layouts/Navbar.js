@@ -1,3 +1,4 @@
+import VerticalDropdown from "components/VerticalDropdown";
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useDispatch } from "react-redux";
@@ -72,11 +73,7 @@ function Navbar(props) {
               </button>
             )}
 
-            {showDropdown && (
-              <button className="w-7 h-7 rounded-full flex items-center justify-center bg-[rgba(255,255,255,.1)] text-[rgba(255,255,255,.8)] text-xl">
-                <BsThreeDotsVertical />
-              </button>
-            )}
+            {showDropdown && <VerticalDropdown />}
 
             {NavbarRightComponent && <NavbarRightComponent />}
           </div>
