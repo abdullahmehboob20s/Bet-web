@@ -34,13 +34,13 @@ function CompetitionSegment({
   twoColumns = false,
 }) {
   return (
-    <div className="rounded overflow-hidden">
+    <div className="rounded overflow-hidden cursor-pointer">
       <div className="flex h-[52px] space-x-1px mb-1px">
         <div className="flex-1 px-5px bg-white-1 flex flex-col justify-center space-y-2px">
           <TitleBar title="Republic of Ireland U19 (Wom)" number="0" />
           <TitleBar title="France U19 (Won)" number="1" />
         </div>
-        <div className="h-full flex-1 flex space-x-1px">
+        <div className="h-full flex space-x-1px">
           {twoColumns ? (
             <>
               <span className="w-[90px]">

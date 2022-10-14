@@ -11,6 +11,7 @@ function AccordionButton({
   onClick,
   iconRotation = "0deg",
   className = "bg-transparent h-[36px]",
+  showDropdownIcon = true,
 }) {
   const toggle = () => {
     if (AccordionSetter) {
@@ -26,24 +27,32 @@ function AccordionButton({
       className={`outline-none flex items-center justify-between w-full space-x-8 ${className}`}
       onClick={toggle}
     >
-      <div className="flex items-center">
-        {ButtonLeftComponent && <ButtonLeftComponent />}
-        <p className={`text-left w-full ellipsis ${titleFontSize}`}>
-          {title && <span className="block ellipsis">{title}</span>}
-          {subtitle && <span className="block ellipsis">{subtitle}</span>}
+      <div className="flex items-center flex-1">
+        {ButtonLeftComponent && <ButtonLeftComponent state={AccordionState} />}
+        <p
+          className={`text-left w-full ellipsis ${titleFontSize} text-inherit`}
+        >
+          {title && (
+            <span className="block ellipsis text-inherit">{title}</span>
+          )}
+          {subtitle && (
+            <span className="block ellipsis text-inherit">{subtitle}</span>
+          )}
         </p>
       </div>
 
-      <span className="flex">
-        <IoIosArrowDown
-          style={{
-            transform: AccordionState
-              ? `rotate(180deg)`
-              : `rotate(${iconRotation})`,
-          }}
-          className={`fill-white-8 text-lg transition-all duration-[.3s]`}
-        />
-      </span>
+      {showDropdownIcon && (
+        <span className="flex">
+          <IoIosArrowDown
+            style={{
+              transform: AccordionState
+                ? `rotate(180deg)`
+                : `rotate(${iconRotation})`,
+            }}
+            className={`fill-white-8 text-lg transition-all duration-[.3s]`}
+          />
+        </span>
+      )}
     </button>
   );
 }

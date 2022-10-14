@@ -10,12 +10,20 @@
   src: url(https://static.springbuilder.site/fs/userFiles-v2/vbetcomaffiliates/fonts/Shina-Design---Qualy.otf?v=1658310479);
 }
 
+@font-face {
+  font-family: "Bebas-Neue-Regular-Custom";
+  font-display: fallback;
+  src: url(https://static.springbuilder.site/fs/userFiles-v2/vbetpromo/fonts/BebasNeue-Regular.ttf?v=1615962323);
+}
+
 .qualy-font {
   font-family: "Qualy Custom";
 }
 
 @layer base {
   :root {
+    @apply scroll-smooth;
+
     --mobile-header-main-section-height: 49px;
     --mobile-header-navigation-height: 40px;
     --mobile-header-full-height: calc(
@@ -79,7 +87,7 @@
   }
 
   body {
-    @apply bg-b text-white overflow-x-hidden;
+    @apply bg-b text-white overflow-x-hidden scroll-smooth;
   }
 }
 

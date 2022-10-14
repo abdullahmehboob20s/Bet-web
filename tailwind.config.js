@@ -9,6 +9,7 @@ module.exports = {
       transparent: "transparent",
       gold: "var(--gold)",
       inherit: "inherit",
+      pink: "#d8298f",
 
       "light-white": "rgb(247,247,247)",
 
@@ -103,6 +104,7 @@ module.exports = {
       fontFamily: {
         roboto: "'Roboto', sans-serif",
         qualy: "'Qualy Custom', sans-serif",
+        bebas: "'Bebas-Neue-Regular-Custom', sans-serif",
       },
       borderWidth: {
         "1px": "1px",
@@ -116,6 +118,12 @@ module.exports = {
       backgroundImage: {
         flags: "url('/public/images/flags.png')",
         "blue-to-purple": "linear-gradient(270deg,#8d17c7,#031778)",
+        "inovation-gradient":
+          "linear-gradient(45deg, rgb(54, 9, 35) 41%,rgb(217, 38, 142) 99%)",
+        "purple-gradient":
+          "linear-gradient(40deg, rgb(30, 9, 57) 36%,rgb(129, 26, 149) 83%)",
+        rainbow:
+          "linear-gradient(45deg, rgb(81, 61, 110) 0%,rgb(127, 43, 103) 31%,rgb(169, 39, 114) 63%,rgb(212, 112, 84) 97%)",
         "profile-img":
           "radial-gradient(circle at -14% 113%,rgba(0,0,0,.65),transparent 120%)",
         "purple-to-transparent":

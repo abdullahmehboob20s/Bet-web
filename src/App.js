@@ -17,6 +17,8 @@ import ResultsPage from "pages/ResultsPage";
 import ProfilePage from "pages/ProfilePage";
 import BottomMenuModal from "components/BottomMenuModal";
 import Affiliates from "pages/Affiliates";
+import AboutUs from "pages/AboutUs";
+import ScrollToTop from "components/ScrollToTop";
 
 function App() {
   const location = useLocation();
@@ -71,20 +73,18 @@ function App() {
         )}
 
       <div>
+        <ScrollToTop />
         <Routes location={background || location}>
           <Route index element={<HomePage />} />
           <Route path="affiliate" element={<Affiliates />} />
+          <Route path="about-us" element={<AboutUs />} />
           <Route path="sports" element={<Sports />} />
           <Route path="results" element={<ResultsPage />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="casino" element={<Casino />}>
             <Route index element={<Home />} />
           </Route>
-          <Route path="live" element={<Live />}>
-            <Route index element={<EventView />} />
-            <Route path="event-view" element={<EventView />} />
-            <Route path="*" element={<Navigate to="event-view" replace />} />
-          </Route>
+          <Route path="live" element={<EventView />} />
         </Routes>
 
         {background && (
