@@ -1,3 +1,4 @@
+import ReactDOM from "react-dom";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import HomePage from "pages/HomePage";
 import Live from "pages/Live";
@@ -14,11 +15,17 @@ import useDelayUnmount from "hooks/useDelayUnmount";
 import RegisterModal from "layouts/RegisterModal";
 import ResultsPage from "pages/ResultsPage";
 import ProfilePage from "pages/ProfilePage";
+import BottomMenuModal from "components/BottomMenuModal";
 
 function App() {
   const location = useLocation();
   const background = location.state && location.state.background;
   const { isOpen } = useSelector((state) => state.signInModalState);
+
+  const { bottomMenuModalOpen } = useSelector(
+    (state) => state.bottomMenuModalState
+  );
+  const shouldbottomModalRender = useDelayUnmount(bottomMenuModalOpen, 260);
   const { isRegisterModalOpen } = useSelector(
     (state) => state.registerModalState
   );
@@ -30,13 +37,14 @@ function App() {
       location.pathname === "/privacy-policy" ||
       location.pathname === "/faq" ||
       isOpen ||
-      isRegisterModalOpen
+      isRegisterModalOpen ||
+      shouldbottomModalRender
     ) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = "scroll";
     }
-  }, [location.pathname, isRegisterModalOpen, isOpen]);
+  }, [location.pathname, isRegisterModalOpen, isOpen, shouldbottomModalRender]);
 
   return (
     <>
@@ -49,6 +57,18 @@ function App() {
       {shouldSignModalRender && (
         <SignInModal className={isOpen ? "fade-in" : "fade-out"} />
       )}
+
+      {shouldbottomModalRender &&
+        ReactDOM.createPortal(
+          <BottomMenuModal
+            className={bottomMenuModalOpen ? "fade-in" : "fade-out"}
+            drawerClassName={
+              bottomMenuModalOpen ? "drawer-fade-in" : "drawer-fade-out"
+            }
+          />,
+          document.getElementById("modals")
+        )}
+
       <div>
         <Routes location={background || location}>
           <Route index element={<HomePage />} />
