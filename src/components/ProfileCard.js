@@ -1,9 +1,18 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
-function ProfileCard({ iconBg, title, Icon, count }) {
+function ProfileCard({
+  iconBg,
+  title,
+  Icon,
+  count,
+  showArrow = true,
+  bg = "bg-white-2",
+}) {
   return (
-    <button className="w-full flex items-center justify-between px-2 h-[42px] bg-white-2 rounded">
+    <button
+      className={`w-full flex items-center justify-between px-2 h-[42px] rounded ${bg}`}
+    >
       <div className="flex items-center justify-between space-x-2">
         <div
           className="min-w-[30px] h-[30px] rounded text-lg flex items-center justify-center relative user-profile-icon z-20"
@@ -20,8 +29,7 @@ function ProfileCard({ iconBg, title, Icon, count }) {
             {count}
           </div>
         )}
-
-        <IoIosArrowForward className="text-xl fill-white-5" />
+        {showArrow && <IoIosArrowForward className="text-xl fill-white-5" />}
       </div>
     </button>
   );
