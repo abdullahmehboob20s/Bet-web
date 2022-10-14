@@ -275,6 +275,33 @@
 
 /* ANIMATIONS */
 
+.dropdown-fade-in {
+  animation: dropdown-fade-in 0.25s forwards;
+}
+.dropdown-fade-out {
+  animation: dropdown-fade-out 0.25s forwards;
+}
+
+@keyframes dropdown-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes dropdown-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+}
+
 .fade-in {
   animation: fadeIn 0.25s;
 }
