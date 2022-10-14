@@ -16,6 +16,7 @@ import RegisterModal from "layouts/RegisterModal";
 import ResultsPage from "pages/ResultsPage";
 import ProfilePage from "pages/ProfilePage";
 import BottomMenuModal from "components/BottomMenuModal";
+import Affiliates from "pages/Affiliates";
 
 function App() {
   const location = useLocation();
@@ -72,6 +73,7 @@ function App() {
       <div>
         <Routes location={background || location}>
           <Route index element={<HomePage />} />
+          <Route path="affiliate" element={<Affiliates />} />
           <Route path="sports" element={<Sports />} />
           <Route path="results" element={<ResultsPage />} />
           <Route path="profile" element={<ProfilePage />} />

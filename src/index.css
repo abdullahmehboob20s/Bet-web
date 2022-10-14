@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Qualy Custom";
+  font-display: fallback;
+  src: url(https://static.springbuilder.site/fs/userFiles-v2/vbetcomaffiliates/fonts/Shina-Design---Qualy.otf?v=1658310479);
+}
+
+.qualy-font {
+  font-family: "Qualy Custom";
+}
+
 @layer base {
   :root {
     --mobile-header-main-section-height: 49px;
@@ -76,6 +86,10 @@
 @layer components {
   .container-wrapper {
     @apply px-7px;
+  }
+
+  .container-2 {
+    @apply max-w-[1200px] mx-auto w-[86%];
   }
 
   .btn {

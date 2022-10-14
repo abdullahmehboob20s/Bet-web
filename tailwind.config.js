@@ -10,6 +10,8 @@ module.exports = {
       gold: "var(--gold)",
       inherit: "inherit",
 
+      "light-white": "rgb(247,247,247)",
+
       "white-01": "rgba(255,255,255,.01)",
       "white-02": "rgba(255,255,255,.02)",
       "white-03": "rgba(255,255,255,.03)",
@@ -100,6 +102,7 @@ module.exports = {
     extend: {
       fontFamily: {
         roboto: "'Roboto', sans-serif",
+        qualy: "'Qualy Custom', sans-serif",
       },
       borderWidth: {
         "1px": "1px",

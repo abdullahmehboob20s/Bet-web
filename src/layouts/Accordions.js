@@ -25,7 +25,7 @@ function Accordions() {
         <Accordion title="ABOUT">
           <div className="space-y-3 mb-4">
             <Anchor to="/faq" title="About us" />
-            <Anchor to="/faq" title="Affiliation" />
+            <Anchor to="/affiliate" title="Affiliation" />
           </div>
         </Accordion>
         <Accordion title="HELP">
