@@ -1,10 +1,19 @@
+import CrossButton from "components/CrossButton";
 import Drawer from "components/Drawer";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function FAQ() {
+  const navigate = useNavigate();
+
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,.8)] z-[200]">
-      <Drawer title="FAQ">
+      <Drawer
+        title="FAQ"
+        HeaderRightComponent={() => (
+          <CrossButton onClick={() => navigate(-1)} />
+        )}
+      >
         {/* <div className="space-y-6 px-4 py-4"></div> */}
 
         <div className="px-4 py-4">
