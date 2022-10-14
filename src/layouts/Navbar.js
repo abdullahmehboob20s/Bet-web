@@ -13,6 +13,9 @@ function Navbar(props) {
     showRegisterButton = true,
     NavbarRightComponent,
   } = props;
+  const [lastScrollTop, setlastScrollTop] = React.useState(0);
+  const [scrollHide, setScrollHide] = React.useState(false);
+
   const dispatch = useDispatch();
 
   const toggleModal = (type) => {
@@ -29,9 +32,37 @@ function Navbar(props) {
     }
   };
 
+  React.useEffect(() => {
+    if (NavbarBottomContent) {
+      const handler = () => {
+        if (window.scrollY > 80) {
+          if (window.scrollY > 200) {
+            var scrollTop =
+              window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+              setScrollHide(true);
+            } else {
+              setScrollHide(false);
+            }
+
+            setlastScrollTop(scrollTop);
+          }
+        } else {
+        }
+      };
+
+      document.addEventListener("scroll", handler);
+
+      return () => {
+        document.removeEventListener("scroll", handler);
+      };
+    }
+  });
+
   return (
     <div className="fixed top-0 left-0 w-full z-[100]">
-      <div className="h-mobile-header-main-section-height flex items-center bg-b border-b-2 border-[rgba(255,255,255,.05)]">
+      <div className="h-mobile-header-main-section-height flex items-center bg-b border-b-2 border-[rgba(255,255,255,.05)] relative z-50">
         <div className="px-1 pr-4 flex items-center justify-between w-full">
           <div className="flex items-center space-x-3">
             <Link className="logo" to="/">
@@ -80,7 +111,13 @@ function Navbar(props) {
       </div>
 
       {NavbarBottomContent && (
-        <div className="absolute top-mobile-header-main-section-height left-0 w-full h-mobile-header-navigation-height">
+        <div
+          className={`absolute top-mobile-header-main-section-height left-0 w-full h-mobile-header-navigation-height z-20 transition-all duration-[.24s] ${
+            scrollHide
+              ? "-translate-y-mobile-header-navigation-height"
+              : "translate-y-0"
+          }`}
+        >
           <NavbarBottomContent />
         </div>
       )}
