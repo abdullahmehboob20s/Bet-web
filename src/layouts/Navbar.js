@@ -1,6 +1,7 @@
 import VerticalDropdown from "components/VerticalDropdown";
 import React from "react";
-import { useDispatch } from "react-redux";
+import { FaUserCircle } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleRegisterModal } from "redux/registerModalState";
 import { toggleSignInModal } from "redux/signInModalState";
@@ -15,6 +16,7 @@ function Navbar(props) {
   } = props;
   const [lastScrollTop, setlastScrollTop] = React.useState(0);
   const [scrollHide, setScrollHide] = React.useState(false);
+  const { isUser } = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
 
@@ -84,21 +86,33 @@ function Navbar(props) {
           </div>
 
           <div className="flex items-center space-x-3">
-            {showSignInButton && (
-              <button
-                className="text-xs text-white uppercase underline"
-                onClick={() => toggleModal("signin")}
+            {isUser ? (
+              <Link
+                to="/profile"
+                className="flex text-[28px] rounded-full"
+                style={{ boxShadow: "0 0 12px #ff3449, 0 0 20px #ff3449" }}
               >
-                Sign in
-              </button>
-            )}
-            {showRegisterButton && (
-              <button
-                className="btn text-xs uppercase h-7"
-                onClick={() => toggleModal("register")}
-              >
-                Register
-              </button>
+                <FaUserCircle className="fill-[#ffffffc9]" />
+              </Link>
+            ) : (
+              <>
+                {showSignInButton && (
+                  <button
+                    className="text-xs text-white uppercase underline"
+                    onClick={() => toggleModal("signin")}
+                  >
+                    Sign in
+                  </button>
+                )}
+                {showRegisterButton && (
+                  <button
+                    className="btn text-xs uppercase h-7"
+                    onClick={() => toggleModal("register")}
+                  >
+                    Register
+                  </button>
+                )}
+              </>
             )}
 
             {showDropdown && <VerticalDropdown />}

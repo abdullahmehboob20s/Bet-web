@@ -11,7 +11,10 @@ import { HiUserCircle } from "react-icons/hi";
 import { IoMdMail } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { MdAccountBalance } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { toggleSignInModal } from "redux/signInModalState";
+import { signOut } from "redux/user";
 import SwiperCore, { EffectCoverflow } from "swiper";
 import { SwiperSlide } from "swiper/react";
 
@@ -26,6 +29,14 @@ const CloseModalBtn = () => {
 };
 
 function ProfilePage() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const logout = () => {
+    dispatch(signOut());
+    navigate("/");
+  };
+
   return (
     <Layout
       showFooter={false}
@@ -103,7 +114,10 @@ function ProfilePage() {
         </div>
 
         <div className="container-wrapper mb-4">
-          <button className="bg-white-05 text-white-7 h-[36px] rounded w-full text-center px-5 text-xs font-medium">
+          <button
+            onClick={logout}
+            className="bg-white-05 text-white-7 h-[36px] rounded w-full text-center px-5 text-xs font-medium"
+          >
             LOGOUT
           </button>
         </div>

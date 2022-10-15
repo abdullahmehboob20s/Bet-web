@@ -6,6 +6,7 @@ import { IoClose } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleSignInModal } from "redux/signInModalState";
+import { signIn } from "redux/user";
 import Navbar from "./Navbar";
 
 const CloseModalBtn = () => {
@@ -22,6 +23,14 @@ const CloseModalBtn = () => {
 };
 
 function SignInModal({ style, className }) {
+  const dispatch = useDispatch();
+
+  const formSubmit = (e) => {
+    e.preventDefault();
+    dispatch(signIn());
+    dispatch(toggleSignInModal(false));
+  };
+
   return (
     <div
       style={style}
@@ -39,7 +48,7 @@ function SignInModal({ style, className }) {
           Sign in, we are waiting for you
         </p>
 
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={formSubmit}>
           <Input label="Email / Username" />
           <Input label="Password" type="password" />
           <Checkbox id="me" title="Remember Me" />
