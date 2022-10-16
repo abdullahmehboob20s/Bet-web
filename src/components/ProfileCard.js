@@ -8,10 +8,12 @@ function ProfileCard({
   count,
   showArrow = true,
   bg = "bg-white-2",
+  onClick,
 }) {
   return (
     <button
-      className={`w-full flex items-center justify-between px-2 h-[42px] rounded ${bg}`}
+      onClick={onClick}
+      className={`w-full flex items-center justify-between px-2 h-[42px] ${bg}`}
     >
       <div className="flex items-center justify-between space-x-2">
         <div

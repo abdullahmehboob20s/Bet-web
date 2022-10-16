@@ -1,19 +1,13 @@
 import Account from "components/Account";
 import BalanceCard from "components/BalanceCard";
-import ProfileCard from "components/ProfileCard";
 import Slider from "components/Slider";
 import User from "components/User";
 import Layout from "layouts/Layout";
+import Cards from "layouts/ProfilePage/Cards";
 import PromoCode from "layouts/ProfilePage/PromoCode";
-import { FaHistory } from "react-icons/fa";
-import { GiExtraTime, GiJourney } from "react-icons/gi";
-import { HiUserCircle } from "react-icons/hi";
-import { IoMdMail } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import { MdAccountBalance } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { toggleSignInModal } from "redux/signInModalState";
 import { signOut } from "redux/user";
 import SwiperCore, { EffectCoverflow } from "swiper";
 import { SwiperSlide } from "swiper/react";
@@ -75,39 +69,7 @@ function ProfilePage() {
           <Account />
         </div>
 
-        <div className="container-wrapper space-y-1 mb-5">
-          <ProfileCard
-            title="My Profile"
-            iconBg="#8b928b"
-            Icon={() => <HiUserCircle />}
-          />
-          <ProfileCard
-            title="Bet History"
-            iconBg="#9ce8bb"
-            Icon={() => <FaHistory />}
-          />
-          <ProfileCard
-            title="Balance Managment"
-            iconBg="#38b838"
-            Icon={() => <MdAccountBalance />}
-          />
-          <ProfileCard
-            count={1}
-            title="Bonuses"
-            iconBg="#f7ff2b"
-            Icon={() => <GiExtraTime />}
-          />
-          <ProfileCard
-            title="Bonuse Journey"
-            iconBg="#ba6e46"
-            Icon={() => <GiJourney />}
-          />
-          <ProfileCard
-            title="Messages"
-            iconBg="#5280dc"
-            Icon={() => <IoMdMail />}
-          />
-        </div>
+        <Cards />
 
         <div className="container-wrapper mb-4">
           <PromoCode />
