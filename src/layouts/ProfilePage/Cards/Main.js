@@ -6,7 +6,7 @@ import { HiUserCircle } from "react-icons/hi";
 import { IoMdMail } from "react-icons/io";
 
 function Main({ states }) {
-  const { activeMenu, setActiveMenu } = states;
+  const { setActiveMenu } = states;
 
   return (
     <div className="space-y-[2px] rounded overflow-hidden">

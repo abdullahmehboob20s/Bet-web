@@ -2,12 +2,11 @@ import ProfileCardsHeader from "components/ProfileCardsHeader";
 import ProfileCard from "components/ProfileCard";
 import { MdAccountBalance } from "react-icons/md";
 import { FaHistory } from "react-icons/fa";
-import { GiExtraTime, GiJourney } from "react-icons/gi";
+import { GiExtraTime } from "react-icons/gi";
 import { HiUserCircle } from "react-icons/hi";
-import { IoMdMail } from "react-icons/io";
 
 function BalanceManagement({ states }) {
-  const { activeMenu, setActiveMenu } = states;
+  const { setActiveMenu } = states;
 
   return (
     <div className="">
