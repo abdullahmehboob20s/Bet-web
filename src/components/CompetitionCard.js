@@ -15,6 +15,7 @@ function CompetitionCard({
   ButtonLeftComponent,
   accordionButtonClassName,
   showDropdownIcon,
+  subtitleClassName,
 }) {
   const [isAccordionOpen, setIsAccordion] = useState(open);
   const accordionMenuRef = useRef(null);
@@ -31,6 +32,7 @@ function CompetitionCard({
   return (
     <div className={className}>
       <AccordionButton
+        subtitleClassName={subtitleClassName}
         showDropdownIcon={showDropdownIcon}
         className={accordionButtonClassName && accordionButtonClassName}
         title={title}

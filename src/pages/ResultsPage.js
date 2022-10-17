@@ -3,6 +3,8 @@ import Filter from "layouts/ResultPage/Filter";
 import Results from "layouts/ResultPage/Results";
 import TabsSection from "layouts/ResultPage/TabsSection";
 import React from "react";
+import SelectBox from "components/SelectBox";
+import CustomDatePicker from "components/CustomDatePicker";
 
 function ResultsPage() {
   return (
@@ -12,7 +14,25 @@ function ResultsPage() {
           <TabsSection />
         </div>
         <div className="mb-6">
-          <Filter />
+          <Filter>
+            <div className="container-wrapper">
+              <div className="border-t-1px border-t-b py-3 space-y-2">
+                <div className="flex items-center space-x-2">
+                  <CustomDatePicker />
+                  <CustomDatePicker />
+                </div>
+
+                <SelectBox
+                  title="Sports"
+                  options={[{ title: "Footbal" }, { title: "Cricket" }]}
+                />
+                <SelectBox
+                  title="Competition"
+                  options={[{ title: "All" }, { title: "Cricket" }]}
+                />
+              </div>
+            </div>
+          </Filter>
         </div>
 
         <Results />

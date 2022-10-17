@@ -12,6 +12,7 @@ function AccordionButton({
   iconRotation = "0deg",
   className = "bg-transparent h-[36px]",
   showDropdownIcon = true,
+  subtitleClassName,
 }) {
   const toggle = () => {
     if (AccordionSetter) {
@@ -36,7 +37,11 @@ function AccordionButton({
             <span className="block ellipsis text-inherit">{title}</span>
           )}
           {subtitle && (
-            <span className="block ellipsis text-inherit">{subtitle}</span>
+            <span
+              className={`block ellipsis text-inherit ${subtitleClassName}`}
+            >
+              {subtitle}
+            </span>
           )}
         </p>
       </div>

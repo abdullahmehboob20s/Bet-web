@@ -25,6 +25,8 @@ import ChangePassword from "pages/ChangePassword";
 import VerifyAccount from "pages/VerifyAccount";
 import TimeOut from "pages/TimeOut";
 import Authentication from "pages/Authentication";
+import All from "pages/BetHistory.js/All";
+import BetHistoryOutlets from "Outlets/BetHistoryOutlets";
 
 function App() {
   const location = useLocation();
@@ -100,6 +102,17 @@ function App() {
               <Route path="verify-account" element={<VerifyAccount />} />
               <Route path="time-out" element={<TimeOut />} />
               <Route path="authentication" element={<Authentication />} />
+            </Route>
+
+            <Route path="bet-history" element={<BetHistoryOutlets />}>
+              <Route path="all" element={<All />} />
+              <Route path="open-bets" element={<All />} />
+              <Route path="cashed-out" element={<All />} />
+              <Route path="won" element={<All />} />
+              <Route path="lost" element={<All />} />
+              <Route path="returned" element={<All />} />
+              <Route path="won-return" element={<All />} />
+              <Route path="lost-return" element={<All />} />
             </Route>
           </Route>
           {/*  */}
