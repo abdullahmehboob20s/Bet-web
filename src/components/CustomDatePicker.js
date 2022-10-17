@@ -4,12 +4,12 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import CustomHeader from "./CustomHeader";
 import SelectBox from "./SelectBox";
 
-function CustomDatePicker() {
-  const [startDate, setStartDate] = useState(new Date());
+function CustomDatePicker({ title = "Range", value = new Date() }) {
+  const [startDate, setStartDate] = useState(value);
 
   return (
     <SelectBox
-      title="Range"
+      title={title}
       overflowHidden={false}
       showDropdownIcon={false}
       Component={({ className }) => (

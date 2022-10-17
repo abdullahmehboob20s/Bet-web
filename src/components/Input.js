@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
-const Input = ({ label, name, type = "text", ...rest }) => {
+const Input = ({
+  label,
+  name,
+  type = "text",
+  disabled = false,
+  val = "",
+  ...rest
+}) => {
   const [typeState, setTypeState] = useState(type);
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(val);
 
   const togglePasswordType = () => {
     if (type === "password") {
@@ -12,7 +19,7 @@ const Input = ({ label, name, type = "text", ...rest }) => {
   };
 
   return (
-    <div className="relative z-0">
+    <div className={`relative z-0 ${disabled ? "opacity-60" : "opacity-100"}`}>
       <input
         {...rest}
         id={name}
@@ -21,6 +28,7 @@ const Input = ({ label, name, type = "text", ...rest }) => {
         placeholder=" "
         value={value}
         onChange={(e) => setValue(e.target.value)}
+        disabled={disabled}
       />
       <label
         htmlFor={name}

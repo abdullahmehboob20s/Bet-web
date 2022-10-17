@@ -8,17 +8,16 @@ function Layout({
   navbarProps,
   showFooter = true,
   showBottomBar = true,
+  layoutClassName = `${
+    navbarProps?.NavbarBottomContent
+      ? "mt-mobile-header-full-height"
+      : "mt-mobile-header-main-section-height"
+  }`,
 }) {
   return (
     <div className={showBottomBar && "pb-mobile-header-main-section-height"}>
       <Navbar {...navbarProps} />
-      <div
-        className={`${
-          navbarProps?.NavbarBottomContent
-            ? "mt-mobile-header-full-height"
-            : "mt-mobile-header-main-section-height"
-        }`}
-      >
+      <div className={layoutClassName}>
         {children}
         {showFooter && <Footer />}
       </div>

@@ -14,10 +14,13 @@ function SelectBox({
   downIconClassName = "top-1/2 -translate-y-1/2 right-5 text-base",
   Component,
   overflowHidden = true,
+  disabled = false,
 }) {
   return (
     <label
-      className={`flex items-center rounded relative cursor-pointer ${bg} ${wrapperClassName}`}
+      className={`flex items-center rounded relative cursor-pointer ${bg} ${wrapperClassName} ${
+        disabled ? "opacity-60" : "opacity-100"
+      }`}
       style={{ overflow: overflowHidden ? "hidden" : "visible" }}
     >
       {Component ? (
@@ -26,6 +29,7 @@ function SelectBox({
         />
       ) : (
         <select
+          disabled={disabled}
           className={`w-full h-full outline-none appearance-none cursor-pointer border-none bg-transparent ${selectBoxClassName}`}
         >
           {options &&

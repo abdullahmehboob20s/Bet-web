@@ -23,7 +23,7 @@ function Cards() {
 
   return (
     <div
-      className="container-wrapper mb-5 transition-all duration-500 relative"
+      className="container-wrapper mb-5 transition-all duration-500 relative overflow-hidden"
       style={{ height: menuHeight }}
       ref={dropdownRef}
     >

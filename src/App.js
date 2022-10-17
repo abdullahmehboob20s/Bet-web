@@ -18,6 +18,13 @@ import BottomMenuModal from "components/BottomMenuModal";
 import Affiliates from "pages/Affiliates";
 import AboutUs from "pages/AboutUs";
 import ScrollToTop from "components/ScrollToTop";
+import MyProfilePage from "pages/MyProfilePage";
+import ProfilePageOutlet from "Outlets/ProfilePageOutlet";
+import MyProfilePageOutlet from "Outlets/MyProfilePageOutlet";
+import ChangePassword from "pages/ChangePassword";
+import VerifyAccount from "pages/VerifyAccount";
+import TimeOut from "pages/TimeOut";
+import Authentication from "pages/Authentication";
 
 function App() {
   const location = useLocation();
@@ -79,7 +86,24 @@ function App() {
           <Route path="about-us" element={<AboutUs />} />
           <Route path="sports" element={<Sports />} />
           <Route path="results" element={<ResultsPage />} />
-          <Route path="profile" element={<ProfilePage />} />
+
+          {/*  */}
+          <Route path="profile" element={<ProfilePageOutlet />}>
+            <Route index element={<ProfilePage />} />
+            <Route path="my-profile" element={<MyProfilePageOutlet />}>
+              <Route
+                index
+                path="personal-details"
+                element={<MyProfilePage />}
+              />
+              <Route path="change-password" element={<ChangePassword />} />
+              <Route path="verify-account" element={<VerifyAccount />} />
+              <Route path="time-out" element={<TimeOut />} />
+              <Route path="authentication" element={<Authentication />} />
+            </Route>
+          </Route>
+          {/*  */}
+
           <Route path="casino" element={<Casino />}>
             <Route index element={<Home />} />
           </Route>

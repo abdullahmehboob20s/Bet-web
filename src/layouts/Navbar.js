@@ -13,6 +13,7 @@ function Navbar(props) {
     showSignInButton = true,
     showRegisterButton = true,
     NavbarRightComponent,
+    Component,
   } = props;
   const [lastScrollTop, setlastScrollTop] = React.useState(0);
   const [scrollHide, setScrollHide] = React.useState(false);
@@ -133,6 +134,8 @@ function Navbar(props) {
           <NavbarBottomContent />
         </div>
       )}
+
+      {Component && <Component />}
     </div>
   );
 }
