@@ -55,6 +55,7 @@ function GamesList() {
 
     setData(newData);
   };
+
   return (
     <div>
       <div className="container-wrapper flex overflow-x-scroll hide-scrollbar space-x-2">

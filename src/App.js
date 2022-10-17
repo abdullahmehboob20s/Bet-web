@@ -27,6 +27,11 @@ import TimeOut from "pages/TimeOut";
 import Authentication from "pages/Authentication";
 import All from "pages/BetHistory.js/All";
 import BetHistoryOutlets from "Outlets/BetHistoryOutlets";
+import BalanceManagementOutlet from "Outlets/BalanceManagementOutlet";
+import Deposit from "pages/BalanceManagement/Deposit";
+import Withdraw from "pages/BalanceManagement/Withdraw";
+import TransactionHistory from "pages/BalanceManagement/TransactionHistory";
+import WithdrawStatus from "pages/BalanceManagement/WithdrawStatus";
 
 function App() {
   const location = useLocation();
@@ -89,9 +94,11 @@ function App() {
           <Route path="sports" element={<Sports />} />
           <Route path="results" element={<ResultsPage />} />
 
-          {/*  */}
+          {/* ======================= */}
           <Route path="profile" element={<ProfilePageOutlet />}>
             <Route index element={<ProfilePage />} />
+
+            {/*  */}
             <Route path="my-profile" element={<MyProfilePageOutlet />}>
               <Route
                 index
@@ -104,6 +111,7 @@ function App() {
               <Route path="authentication" element={<Authentication />} />
             </Route>
 
+            {/*  */}
             <Route path="bet-history" element={<BetHistoryOutlets />}>
               <Route path="all" element={<All />} />
               <Route path="open-bets" element={<All />} />
@@ -114,8 +122,22 @@ function App() {
               <Route path="won-return" element={<All />} />
               <Route path="lost-return" element={<All />} />
             </Route>
+
+            {/*  */}
+            <Route
+              path="balance-management"
+              element={<BalanceManagementOutlet />}
+            >
+              <Route path="deposit" element={<Deposit />} />
+              <Route path="withdraw" element={<Withdraw />} />
+              <Route path="withdraw-status" element={<WithdrawStatus />} />
+              <Route
+                path="transaction-history"
+                element={<TransactionHistory />}
+              />
+            </Route>
           </Route>
-          {/*  */}
+          {/* ======================= */}
 
           <Route path="casino" element={<Casino />}>
             <Route index element={<Home />} />
