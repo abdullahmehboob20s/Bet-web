@@ -16,7 +16,7 @@ function BetHistoryOutlets() {
         NavbarRightComponent: () => <CloseModalBtn to="/" />,
         Component: () => (
           <NavbarHeaderWithBackButton
-            pageName="MY PROFILE"
+            pageName="BET HISTORY"
             linksdata={betHistoryLinks}
           />
         ),
