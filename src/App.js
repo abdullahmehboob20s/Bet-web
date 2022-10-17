@@ -32,6 +32,13 @@ import Deposit from "pages/BalanceManagement/Deposit";
 import Withdraw from "pages/BalanceManagement/Withdraw";
 import TransactionHistory from "pages/BalanceManagement/TransactionHistory";
 import WithdrawStatus from "pages/BalanceManagement/WithdrawStatus";
+import BonusesOutlet from "Outlets/BonusesOutlet";
+import SportBonus from "pages/Bonuses/SportBonus";
+import CasinoBonus from "pages/Bonuses/CasinoBonus";
+import CasinoFreeSpin from "pages/Bonuses/CasinoFreeSpin";
+import BonusHistory from "pages/Bonuses/BonusHistory";
+import ReferAFriend from "pages/Bonuses/ReferAFriend";
+import PromoCode from "pages/Bonuses/PromoCode";
 
 function App() {
   const location = useLocation();
@@ -135,6 +142,15 @@ function App() {
                 path="transaction-history"
                 element={<TransactionHistory />}
               />
+            </Route>
+
+            <Route path="bonuses" element={<BonusesOutlet />}>
+              <Route path="sport-bonus" element={<SportBonus />} />
+              <Route path="casino-bonus" element={<CasinoBonus />} />
+              <Route path="casino-free-spins" element={<CasinoFreeSpin />} />
+              <Route path="bonus-history" element={<BonusHistory />} />
+              <Route path="refer-a-friend" element={<ReferAFriend />} />
+              <Route path="promo-code" element={<PromoCode />} />
             </Route>
           </Route>
           {/* ======================= */}
