@@ -1,9 +1,11 @@
 import ProfileCardsHeader from "components/ProfileCardsHeader";
 import ProfileCard from "components/ProfileCard";
 import { HiUserCircle } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
 function Messages({ states }) {
   const { setActiveMenu } = states;
+  const navigate = useNavigate();
 
   return (
     <div className="">
@@ -16,7 +18,7 @@ function Messages({ states }) {
           title="Inbox"
           iconBg="#8b928b"
           Icon={() => <HiUserCircle />}
-          onClick={() => setActiveMenu("My Profile")}
+          onClick={() => navigate("messages")}
         />
       </div>
     </div>

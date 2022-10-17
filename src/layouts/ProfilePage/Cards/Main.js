@@ -4,9 +4,11 @@ import { FaHistory } from "react-icons/fa";
 import { GiExtraTime, GiJourney } from "react-icons/gi";
 import { HiUserCircle } from "react-icons/hi";
 import { IoMdMail } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 function Main({ states }) {
   const { setActiveMenu } = states;
+  const navigate = useNavigate();
 
   return (
     <div className="space-y-[2px] rounded overflow-hidden">
@@ -39,6 +41,7 @@ function Main({ states }) {
         title="Bonuse Journey"
         iconBg="#ba6e46"
         Icon={() => <GiJourney />}
+        onClick={() => navigate("bonus-journey")}
       />
       <ProfileCard
         title="Messages"

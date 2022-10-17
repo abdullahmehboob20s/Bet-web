@@ -2,6 +2,8 @@ import Layout from "layouts/Layout";
 import CloseModalBtn from "components/CloseModalBtn";
 import MyProfileLinksComponent from "components/MyProfileLinksComponent";
 import { Outlet } from "react-router-dom";
+import NavbarHeaderWithBackButton from "components/NavbarHeaderWithBackButton";
+import myProfileLinks from "assets/data/myprofil-links-data";
 
 function MyProfilePageOutlet() {
   return (
@@ -13,7 +15,12 @@ function MyProfilePageOutlet() {
         showSignInButton: false,
         showRegisterButton: false,
         NavbarRightComponent: () => <CloseModalBtn to="/" />,
-        Component: MyProfileLinksComponent,
+        Component: () => (
+          <NavbarHeaderWithBackButton
+            pageName="MY PROFILE"
+            linksdata={myProfileLinks}
+          />
+        ),
       }}
     >
       <div className="pt-[calc(var(--mobile-header-navigation-height)*2+1rem)]">

@@ -39,6 +39,8 @@ import CasinoFreeSpin from "pages/Bonuses/CasinoFreeSpin";
 import BonusHistory from "pages/Bonuses/BonusHistory";
 import ReferAFriend from "pages/Bonuses/ReferAFriend";
 import PromoCode from "pages/Bonuses/PromoCode";
+import BonusJourney from "pages/Bonuses/BonusJourney";
+import MessagesPage from "pages/Bonuses/MessagesPage";
 
 function App() {
   const location = useLocation();
@@ -104,6 +106,8 @@ function App() {
           {/* ======================= */}
           <Route path="profile" element={<ProfilePageOutlet />}>
             <Route index element={<ProfilePage />} />
+            <Route path="bonus-journey" element={<BonusJourney />} />
+            <Route path="messages" element={<MessagesPage />} />
 
             {/*  */}
             <Route path="my-profile" element={<MyProfilePageOutlet />}>

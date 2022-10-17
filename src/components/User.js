@@ -2,6 +2,7 @@ import React from "react";
 import { HiUserCircle } from "react-icons/hi";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdContentCopy } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function User() {
   return (
@@ -18,9 +19,9 @@ function User() {
           </p>
         </div>
 
-        <button className="flex">
+        <Link to="my-profile/personal-details" className="flex">
           <IoIosArrowForward className="text-xl fill-white-5" />
-        </button>
+        </Link>
       </div>
     </div>
   );

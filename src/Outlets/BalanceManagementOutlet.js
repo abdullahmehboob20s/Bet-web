@@ -1,7 +1,8 @@
 import Layout from "layouts/Layout";
 import CloseModalBtn from "components/CloseModalBtn";
 import { Outlet } from "react-router-dom";
-import BalanceManagementLinks from "components/BalanceManagementLinks";
+import NavbarHeaderWithBackButton from "components/NavbarHeaderWithBackButton";
+import balanceManagementLinks from "assets/data/balanceManagementLinks";
 
 function BalanceManagementOutlet() {
   return (
@@ -13,7 +14,12 @@ function BalanceManagementOutlet() {
         showSignInButton: false,
         showRegisterButton: false,
         NavbarRightComponent: () => <CloseModalBtn to="/" />,
-        Component: BalanceManagementLinks,
+        Component: () => (
+          <NavbarHeaderWithBackButton
+            pageName="BALANCE MANAGEMENTS"
+            linksdata={balanceManagementLinks}
+          />
+        ),
       }}
     >
       <div className="pt-[calc(var(--mobile-header-navigation-height)*2+1rem)]">

@@ -21,7 +21,7 @@ const bonusesNavbarLinks = [
   },
   {
     title: "Casino Free Spins",
-    relativeLink: "bonuses/casino-free-spin",
+    relativeLink: "bonuses/casino-free-spins",
     absoluteLink: "casino-free-spins",
     target: "_self",
     color: "#8b928b",

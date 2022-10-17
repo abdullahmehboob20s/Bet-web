@@ -1,7 +1,8 @@
 import Layout from "layouts/Layout";
 import CloseModalBtn from "components/CloseModalBtn";
 import { Outlet } from "react-router-dom";
-import BetHistoryLinks from "components/BetHistoryLinks";
+import NavbarHeaderWithBackButton from "components/NavbarHeaderWithBackButton";
+import betHistoryLinks from "assets/data/betHistoryLinks";
 
 function BetHistoryOutlets() {
   return (
@@ -13,7 +14,12 @@ function BetHistoryOutlets() {
         showSignInButton: false,
         showRegisterButton: false,
         NavbarRightComponent: () => <CloseModalBtn to="/" />,
-        Component: BetHistoryLinks,
+        Component: () => (
+          <NavbarHeaderWithBackButton
+            pageName="MY PROFILE"
+            linksdata={betHistoryLinks}
+          />
+        ),
       }}
     >
       <div className="pt-[calc(var(--mobile-header-navigation-height)*2+1rem)]">
