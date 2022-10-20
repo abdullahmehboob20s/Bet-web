@@ -5,6 +5,7 @@ import { IoMdWallet } from "react-icons/io";
 import { MdTakeoutDining } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { toogleVisibility } from "redux/balanceVisibilityState";
+import { Link } from "react-router-dom";
 
 function BalanceCard({ bg }) {
   const { visible } = useSelector((state) => state.balanceVisibilityState);
@@ -38,14 +39,20 @@ function BalanceCard({ bg }) {
       </div>
 
       <div className="grid grid-cols-2 gap-5">
-        <button className="flex items-center justify-center space-x-2 h-[34px] rounded bg-white-2 hover:bg-white-3 transition-all duration-[.24s] uppercase text-sm px-5px text-white">
+        <Link
+          to="balance-management/deposit"
+          className="flex items-center justify-center space-x-2 h-[34px] rounded bg-white-2 hover:bg-white-3 transition-all duration-[.24s] uppercase text-sm px-5px text-white"
+        >
           <IoMdWallet className="text-xl" />
           <span className="leading-1">Deposit</span>
-        </button>
-        <button className="flex items-center justify-center space-x-2 h-[34px] rounded bg-white-2 hover:bg-white-3 transition-all duration-[.24s] uppercase text-sm px-5px text-white">
+        </Link>
+        <Link
+          to="balance-management/withdraw"
+          className="flex items-center justify-center space-x-2 h-[34px] rounded bg-white-2 hover:bg-white-3 transition-all duration-[.24s] uppercase text-sm px-5px text-white"
+        >
           <MdTakeoutDining className="text-xl" />
           <span className="leading-1">Withdraw</span>
-        </button>
+        </Link>
       </div>
     </div>
   );
