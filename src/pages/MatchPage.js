@@ -1,3 +1,4 @@
+import MatchCards from "components/MatchCards";
 import NavbarHeaderWithBackButton from "components/NavbarHeaderWithBackButton";
 import Layout from "layouts/Layout";
 import ScoreCard from "layouts/MatchPage/ScoreCard";
@@ -28,7 +29,11 @@ function MatchPage() {
       }}
     >
       <div className="pt-[calc(var(--mobile-header-navigation-height)+.4rem)] pb-10">
-        <ScoreCard />
+        <div className="mb-4">
+          <ScoreCard />
+        </div>
+
+        <MatchCards />
       </div>
     </Layout>
   );

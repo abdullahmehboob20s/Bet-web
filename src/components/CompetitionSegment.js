@@ -1,28 +1,13 @@
 import React from "react";
 import { BsBarChartFill, BsFillCameraVideoFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import UpAndDownCard from "./UpAndDownCard";
 
 const TitleBar = ({ title, number }) => {
   return (
     <div className="grid grid-cols-[1fr_auto] items-center space-x-2">
       <p className="text-xs flex-1 text-white ellipsis">{title}</p>
       <p className="text-xs text-oc-2 ellipsis">{number}</p>
-    </div>
-  );
-};
-
-const StatCard = ({ isUp = false, isDown = false, title = "-" }) => {
-  return (
-    <div
-      className="w-full bg-white-2 h-full flex items-center justify-center relative"
-      dir={"ltr"}
-    >
-      {isUp && <i className="market-arrow-up-down-bc is-up"></i>}
-      {isDown && <i className="market-arrow-up-down-bc is-down"></i>}
-
-      <span className="text-oc-2 text-13px transition-all duration-[.25s]">
-        {title}
-      </span>
     </div>
   );
 };
@@ -44,22 +29,22 @@ function CompetitionSegment({
           {twoColumns ? (
             <>
               <span className="w-[90px]">
-                <StatCard isUp={true} title="3.47" />
+                <UpAndDownCard isUp={true} title="3.47" />
               </span>
               <span className="w-[90px]">
-                <StatCard title="1.13" isDown={true} />
+                <UpAndDownCard title="1.13" isDown={true} />
               </span>
             </>
           ) : (
             <>
               <span className="w-[60px]">
-                <StatCard isUp={true} title="3.47" />
+                <UpAndDownCard isUp={true} title="3.47" />
               </span>
               <span className="w-[60px]">
-                <StatCard title="1.13" isDown={true} />
+                <UpAndDownCard title="1.13" isDown={true} />
               </span>
               <span className="w-[60px]">
-                <StatCard />
+                <UpAndDownCard />
               </span>
             </>
           )}

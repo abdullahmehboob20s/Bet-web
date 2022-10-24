@@ -13,6 +13,9 @@ function AccordionButton({
   className = "bg-transparent h-[36px]",
   showDropdownIcon = true,
   subtitleClassName,
+  rightComponentClassName,
+  RightComponent,
+  arrowClassName,
 }) {
   const toggle = () => {
     if (AccordionSetter) {
@@ -28,7 +31,7 @@ function AccordionButton({
       className={`outline-none flex items-center justify-between w-full space-x-8 ${className}`}
       onClick={toggle}
     >
-      <div className="flex items-center flex-1">
+      <div className="flex items-center flex-1 overflow-hidden">
         {ButtonLeftComponent && <ButtonLeftComponent state={AccordionState} />}
         <p
           className={`text-left w-full ellipsis ${titleFontSize} text-inherit`}
@@ -46,18 +49,22 @@ function AccordionButton({
         </p>
       </div>
 
-      {showDropdownIcon && (
-        <span className="flex">
-          <IoIosArrowDown
-            style={{
-              transform: AccordionState
-                ? `rotate(180deg)`
-                : `rotate(${iconRotation})`,
-            }}
-            className={`fill-white-8 text-lg transition-all duration-[.3s]`}
-          />
-        </span>
-      )}
+      <div className={rightComponentClassName}>
+        {RightComponent && <RightComponent />}
+
+        {showDropdownIcon && (
+          <span className={`flex ${arrowClassName}`}>
+            <IoIosArrowDown
+              style={{
+                transform: AccordionState
+                  ? `rotate(180deg)`
+                  : `rotate(${iconRotation})`,
+              }}
+              className={`fill-white-8 text-lg transition-all duration-[.3s]`}
+            />
+          </span>
+        )}
+      </div>
     </button>
   );
 }

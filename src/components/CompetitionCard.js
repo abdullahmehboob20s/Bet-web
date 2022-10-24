@@ -16,12 +16,16 @@ function CompetitionCard({
   showDropdownIcon,
   subtitleClassName,
   childrenWrapperClassName = "pt-2 space-y-2",
+  ButtonRightComponent,
+  buttonRightComponentClassName,
+  arrowClassName,
 }) {
   const [isAccordionOpen, setIsAccordion] = useState(open);
   const accordionMenuRef = useRef(null);
 
   useEffect(() => {
     if (isAccordionOpen) {
+      console.log("running");
       accordionMenuRef.current.style.height =
         accordionMenuRef.current.scrollHeight + "px";
     } else {
@@ -41,6 +45,9 @@ function CompetitionCard({
         AccordionSetter={setIsAccordion}
         titleFontSize={titleFontSize && titleFontSize}
         iconRotation={iconRotation && iconRotation}
+        RightComponent={ButtonRightComponent}
+        rightComponentClassName={buttonRightComponentClassName}
+        arrowClassName={arrowClassName}
         ButtonLeftComponent={
           ButtonLeftComponent
             ? ButtonLeftComponent
