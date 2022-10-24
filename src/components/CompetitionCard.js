@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
 import AccordionButton from "./AccordionButton";
 import FlagBox from "./FlagBox";
 
@@ -16,6 +15,7 @@ function CompetitionCard({
   accordionButtonClassName,
   showDropdownIcon,
   subtitleClassName,
+  childrenWrapperClassName = "pt-2 space-y-2",
 }) {
   const [isAccordionOpen, setIsAccordion] = useState(open);
   const accordionMenuRef = useRef(null);
@@ -59,7 +59,7 @@ function CompetitionCard({
         className="h-0 overflow-hidden transition-all duration-[.3s]"
         ref={accordionMenuRef}
       >
-        <div className="pt-2 space-y-2">{children}</div>
+        <div className={childrenWrapperClassName}>{children}</div>
       </div>
     </div>
   );

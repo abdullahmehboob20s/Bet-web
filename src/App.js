@@ -41,6 +41,7 @@ import ReferAFriend from "pages/Bonuses/ReferAFriend";
 import PromoCode from "pages/Bonuses/PromoCode";
 import BonusJourney from "pages/Bonuses/BonusJourney";
 import MessagesPage from "pages/Bonuses/MessagesPage";
+import MatchPage from "pages/MatchPage";
 
 function App() {
   const location = useLocation();
@@ -102,6 +103,7 @@ function App() {
           <Route path="about-us" element={<AboutUs />} />
           <Route path="sports" element={<Sports />} />
           <Route path="results" element={<ResultsPage />} />
+          <Route path="match" element={<MatchPage />} />
 
           {/* ======================= */}
           <Route path="profile" element={<ProfilePageOutlet />}>

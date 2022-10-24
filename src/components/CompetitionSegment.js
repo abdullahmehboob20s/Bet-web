@@ -1,6 +1,6 @@
 import React from "react";
 import { BsBarChartFill, BsFillCameraVideoFill } from "react-icons/bs";
-import { CgMediaLive } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 const TitleBar = ({ title, number }) => {
   return (
@@ -34,7 +34,7 @@ function CompetitionSegment({
   twoColumns = false,
 }) {
   return (
-    <div className="rounded overflow-hidden cursor-pointer">
+    <Link to="/match" className="rounded overflow-hidden cursor-pointer">
       <div className="flex h-[52px] space-x-1px mb-1px">
         <div className="flex-1 px-5px bg-white-1 flex flex-col justify-center space-y-2px">
           <TitleBar title="Republic of Ireland U19 (Wom)" number="0" />
@@ -94,7 +94,7 @@ function CompetitionSegment({
           {StatsNumber && <p className="text-xs text-white">{StatsNumber}</p>}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

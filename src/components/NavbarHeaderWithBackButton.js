@@ -7,14 +7,17 @@ function NavbarHeaderWithBackButton({
   pageName,
   linksdata,
   backTo = "/profile",
+  TopBarRightComponent,
 }) {
   return (
     <div className="bg-b z-10">
-      <div className="container-wrapper h-mobile-header-navigation-height">
+      <div className="container-wrapper h-mobile-header-navigation-height flex items-center justify-between">
         <Link to={backTo} className="flex items-center space-x-2 h-full">
           <IoIosArrowDropleftCircle className="fill-white-8 text-xl" />
           <p className="text-sm text-white leading-1">{pageName}</p>
         </Link>
+
+        {TopBarRightComponent && <TopBarRightComponent />}
       </div>
       {linksdata && (
         <div className="flex items-center overflow-x-scroll overflow-y-visible relative z-50 hide-scrollbar h-mobile-header-navigation-height">
