@@ -140,6 +140,18 @@
     box-shadow: -1px 0 0 0 var(--b);
     padding-left: 6px;
   }
+
+  .calculator-btn {
+    @apply bg-[rgba(var(--b-rgb),.15)] text-[rgba(var(--b-rgb),.7)] text-sm font-medium h-[36px] rounded flex items-center justify-center transition-all duration-[.24s];
+  }
+
+  .calculator-btn.editor {
+    @apply bg-[rgba(var(--b-rgb),.1)];
+  }
+
+  .calculator-btn.selected {
+    @apply border-1px border-[rgba(var(--b-rgb),.7)] bg-white;
+  }
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -575,6 +587,24 @@
 
 /* CSSTransition classes  */
 
+.stake-modal-enter {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.menu-primary-enter-active {
+  transform: translateY(0);
+  transition: all 300ms ease;
+  opacity: 1;
+}
+.menu-primary-exit {
+  /* position: absolute; */
+}
+.menu-primary-exit-active {
+  transform: translateY(300px);
+  transition: all 300ms ease;
+  opacity: 0;
+}
+
 .menu {
   width: 100%;
 }
@@ -608,6 +638,26 @@
 .menu-secondary-exit-active {
   transform: translateX(110%);
   transition: all var(--speed) ease;
+}
+
+/* MATCH DROPDOWN */
+
+.match-dropdown-enter {
+  transform: translateY(6%);
+  transition: all 300ms ease;
+  opacity: 0;
+}
+.match-dropdown-enter-active {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 300ms ease;
+}
+.match-dropdown-exit {
+}
+.match-dropdown-exit-active {
+  transform: translateY(-6%);
+  transition: all 300ms ease;
+  opacity: 0;
 }
 
 /* SWICTH ==================================== */
@@ -672,8 +722,7 @@ input:checked + .slider:before {
 }
 
 .live-score-bg-soccer {
-  background: url(https://m.vbet.com/static/media/soccer.02266af1.png) no-repeat
-    50% 50% / cover;
+  background: url(../public/images/field-img.png) no-repeat 50% 50% / cover;
 }
 
 .visuals {
@@ -727,4 +776,21 @@ input:checked + .slider:before {
   transform: translateY(-50%);
   z-index: 1;
   /* border: 2px solid red; */
+}
+
+.black-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 110 !important;
+  transition: all 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.black-screen.show {
+  opacity: 1;
+  pointer-events: visible;
 }

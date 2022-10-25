@@ -84,7 +84,7 @@ function Sports() {
             />
           </div>
 
-          <SearchBar />
+          <SearchBar className="z-[100] px-7px" />
         </div>
 
         <div className="mb-10px">

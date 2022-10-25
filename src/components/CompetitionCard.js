@@ -25,7 +25,6 @@ function CompetitionCard({
 
   useEffect(() => {
     if (isAccordionOpen) {
-      console.log("running");
       accordionMenuRef.current.style.height =
         accordionMenuRef.current.scrollHeight + "px";
     } else {

@@ -1,29 +1,20 @@
-import MatchCards from "components/MatchCards";
+import MatchNavbarDropdown from "components/MatchNavbarDropdown";
 import NavbarHeaderWithBackButton from "components/NavbarHeaderWithBackButton";
 import Layout from "layouts/Layout";
 import ScoreCard from "layouts/MatchPage/ScoreCard";
+import TabLinks from "layouts/MatchPage/TabLinks";
 import React from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { Outlet } from "react-router-dom";
 
-const NavbarDropdown = () => {
-  return (
-    <div>
-      <button className="w-6 h-6 flex items-center justify-center bg-white-1 rounded text-base">
-        <IoIosArrowDown className="fill-white-8" />
-      </button>
-    </div>
-  );
-};
-
-function MatchPage() {
+function MatchPageOutlet() {
   return (
     <Layout
       navbarProps={{
         Component: () => (
           <NavbarHeaderWithBackButton
-            backTo={-1}
+            backTo={"/live"}
             pageName="Primera A"
-            TopBarRightComponent={NavbarDropdown}
+            TopBarRightComponent={MatchNavbarDropdown}
           />
         ),
       }}
@@ -33,10 +24,14 @@ function MatchPage() {
           <ScoreCard />
         </div>
 
-        <MatchCards />
+        <div className="mb-4">
+          <TabLinks />
+        </div>
+
+        <Outlet />
       </div>
     </Layout>
   );
 }
 
-export default MatchPage;
+export default MatchPageOutlet;

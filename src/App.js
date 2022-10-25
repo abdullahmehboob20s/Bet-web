@@ -41,12 +41,20 @@ import ReferAFriend from "pages/Bonuses/ReferAFriend";
 import PromoCode from "pages/Bonuses/PromoCode";
 import BonusJourney from "pages/Bonuses/BonusJourney";
 import MessagesPage from "pages/Bonuses/MessagesPage";
-import MatchPage from "pages/MatchPage";
+import MatchPageOutlet from "Outlets/MatchPageOutlet";
+import AllMatches from "pages/MatchPage/All";
+import StakeModal from "components/StakeModal";
+import { CSSTransition } from "react-transition-group";
+import BackToTopButton from "components/BackToTopButton";
 
 function App() {
   const location = useLocation();
   const background = location.state && location.state.background;
   const { isOpen } = useSelector((state) => state.signInModalState);
+
+  const { stakeModalVisible } = useSelector(
+    (state) => state.stakeModalVisibilityState
+  );
 
   const { bottomMenuModalOpen } = useSelector(
     (state) => state.bottomMenuModalState
@@ -64,13 +72,20 @@ function App() {
       location.pathname === "/faq" ||
       isOpen ||
       isRegisterModalOpen ||
-      shouldbottomModalRender
+      shouldbottomModalRender ||
+      stakeModalVisible
     ) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = "scroll";
     }
-  }, [location.pathname, isRegisterModalOpen, isOpen, shouldbottomModalRender]);
+  }, [
+    location.pathname,
+    isRegisterModalOpen,
+    isOpen,
+    shouldbottomModalRender,
+    stakeModalVisible,
+  ]);
 
   return (
     <>
@@ -84,6 +99,8 @@ function App() {
         <SignInModal className={isOpen ? "fade-in" : "fade-out"} />
       )}
 
+      {stakeModalVisible && <StakeModal />}
+
       {shouldbottomModalRender &&
         ReactDOM.createPortal(
           <BottomMenuModal
@@ -95,6 +112,8 @@ function App() {
           document.getElementById("modals")
         )}
 
+      <BackToTopButton />
+
       <div>
         <ScrollToTop />
         <Routes location={background || location}>
@@ -103,7 +122,14 @@ function App() {
           <Route path="about-us" element={<AboutUs />} />
           <Route path="sports" element={<Sports />} />
           <Route path="results" element={<ResultsPage />} />
-          <Route path="match" element={<MatchPage />} />
+
+          <Route path="match" element={<MatchPageOutlet />}>
+            <Route index element={<AllMatches />} />
+            <Route path="stared" element={<AllMatches />} />
+            <Route path="match" element={<AllMatches />} />
+            <Route path="tools" element={<AllMatches />} />
+            <Route path="handicaps" element={<AllMatches />} />
+          </Route>
 
           {/* ======================= */}
           <Route path="profile" element={<ProfilePageOutlet />}>

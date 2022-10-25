@@ -5,8 +5,6 @@ import MatchAccordion from "./MatchAccordion";
 function MatchCards() {
   const [open, setOpen] = useState(true);
 
-  console.log(open);
-
   return (
     <div className="space-y-1">
       <AccordionButton

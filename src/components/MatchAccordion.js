@@ -3,6 +3,7 @@ import { BiLink, BiStar } from "react-icons/bi";
 import { BsFillBarChartLineFill } from "react-icons/bs";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import MatchStatCard from "./MatchStatCard";
+import { v4 as uuidv4 } from "uuid";
 
 function MatchAccordion({
   open = false,
@@ -55,7 +56,13 @@ function MatchAccordion({
           ))}
 
         {new Array(items).fill("").map((i, index) => (
-          <MatchStatCard title="1.10" desc="Draw" isDown={true} />
+          <MatchStatCard
+            key={index}
+            id={uuidv4()}
+            title="1.10"
+            desc="Draw"
+            isDown={true}
+          />
         ))}
       </div>
     </CompetitionCard>

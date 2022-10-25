@@ -3,7 +3,7 @@ import React from "react";
 function RadioButton({ label, name, checked, className }) {
   return (
     <label
-      class={`${className} radio-container relative cursor-pointer flex items-center`}
+      className={`${className} radio-container relative cursor-pointer flex items-center`}
     >
       <input type="radio" name={name} checked={checked} />
       <span className="radio-checkmark"></span>
