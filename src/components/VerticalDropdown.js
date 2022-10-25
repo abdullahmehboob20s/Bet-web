@@ -1,3 +1,4 @@
+import OutsideClickDetector from "hooks/OutsideClickDetector";
 import useDelayUnmount from "hooks/useDelayUnmount";
 import React, { useState } from "react";
 import { AiTwotoneSetting, AiTwotoneStar } from "react-icons/ai";
@@ -17,6 +18,7 @@ const IconButton = ({ children }) => {
 function VerticalDropdown() {
   const [active, setIsActive] = useState(false);
   const shouldDropdownRender = useDelayUnmount(active, 300);
+  const dropdownRef = OutsideClickDetector(() => setIsActive(false));
 
   return (
     <div className="relative">
@@ -35,6 +37,7 @@ function VerticalDropdown() {
 
       {shouldDropdownRender && (
         <div
+          ref={dropdownRef}
           className={`w-[54px] h-[51vh] rounded z-50 right-[12px] transition-all duration-[.24s] fixed top-[calc(var(--mobile-header-main-section-height))] -translate-y-4 ${
             active ? "dropdown-fade-in" : "dropdown-fade-out"
           }`}

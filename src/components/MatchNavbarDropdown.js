@@ -51,7 +51,7 @@ function MatchNavbarDropdown() {
   }, [active]);
 
   return (
-    <div ref={menuRef}>
+    <div>
       <button
         onClick={() => setActive((val) => !val)}
         className="w-6 h-6 flex items-center justify-center bg-white-1 rounded text-base"
@@ -73,7 +73,10 @@ function MatchNavbarDropdown() {
             classNames="match-dropdown"
             unmountOnExit
           >
-            <div className="fixed top-[18%] left-0 flex justify-center w-[100%] transition-all duration-[.3s] z-[400]">
+            <div
+              ref={menuRef}
+              className="fixed top-[18%] left-0 flex justify-center w-[100%] transition-all duration-[.3s] z-[400]"
+            >
               <div className="space-y-1 rounded h-[50vh] bg-b p-7px overflow-y-auto w-[90%]">
                 <CompetitionCard
                   title="ATP Challenger Playford - Hard"
