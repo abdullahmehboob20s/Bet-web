@@ -1,11 +1,9 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "pages/HomePage";
 import EventView from "pages/Live/EventView";
 import Sports from "pages/Sports";
 import Casino from "pages/Casino/Casino";
 import Home from "pages/Casino/Home";
-import PrivacyPolicy from "pages/PrivacyPolicy";
-import FAQ from "pages/FAQ";
 import ResultsPage from "pages/ResultsPage";
 import ProfilePage from "pages/ProfilePage";
 import Affiliates from "pages/Affiliates";
