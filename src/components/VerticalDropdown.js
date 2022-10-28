@@ -21,7 +21,7 @@ function VerticalDropdown() {
   const dropdownRef = OutsideClickDetector(() => setIsActive(false));
 
   return (
-    <div className="relative">
+    <div className="relative" ref={dropdownRef}>
       <button
         className={`w-7 h-7 relative z-[100] rounded-full flex items-center transition-all duration-[.24s] justify-center text-xl ${
           active ? "bg-white-8" : "bg-white-1"
@@ -37,7 +37,6 @@ function VerticalDropdown() {
 
       {shouldDropdownRender && (
         <div
-          ref={dropdownRef}
           className={`w-[54px] h-[51vh] rounded z-50 right-[12px] transition-all duration-[.24s] fixed top-[calc(var(--mobile-header-main-section-height))] -translate-y-4 ${
             active ? "dropdown-fade-in" : "dropdown-fade-out"
           }`}
