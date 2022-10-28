@@ -1,6 +1,5 @@
 import CrossButton from "components/CrossButton";
 import Drawer from "components/Drawer";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function FAQ() {

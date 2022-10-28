@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import balanceVisibilityState from "./balanceVisibilityState";
 import bottomMenuModalState from "./bottomMenuModalState";
+import locationState from "./locationState";
 import registerModalState from "./registerModalState";
 import signInModalState from "./signInModalState";
 import stakeModalVisibilityState from "./stakeModalVisibilityState";
@@ -14,5 +15,6 @@ export const store = configureStore({
     bottomMenuModalState,
     stakeModalVisibilityState,
     user,
+    locationState,
   },
 });

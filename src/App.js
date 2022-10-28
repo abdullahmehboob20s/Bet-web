@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "pages/HomePage";
 import EventView from "pages/Live/EventView";
@@ -6,15 +5,9 @@ import Sports from "pages/Sports";
 import Casino from "pages/Casino/Casino";
 import Home from "pages/Casino/Home";
 import PrivacyPolicy from "pages/PrivacyPolicy";
-import { useEffect } from "react";
 import FAQ from "pages/FAQ";
-import SignInModal from "layouts/SignInModal";
-import { useSelector } from "react-redux";
-import useDelayUnmount from "hooks/useDelayUnmount";
-import RegisterModal from "layouts/RegisterModal";
 import ResultsPage from "pages/ResultsPage";
 import ProfilePage from "pages/ProfilePage";
-import BottomMenuModal from "components/BottomMenuModal";
 import Affiliates from "pages/Affiliates";
 import AboutUs from "pages/AboutUs";
 import ScrollToTop from "components/ScrollToTop";
@@ -43,80 +36,18 @@ import BonusJourney from "pages/Bonuses/BonusJourney";
 import MessagesPage from "pages/Bonuses/MessagesPage";
 import MatchPageOutlet from "Outlets/MatchPageOutlet";
 import AllMatches from "pages/MatchPage/All";
-import StakeModal from "components/StakeModal";
-import { CSSTransition } from "react-transition-group";
-import BackToTopButton from "components/BackToTopButton";
+import ModalPage from "layouts/ModalPage";
+import ScrollHiderConditions from "components/ScrollHiderConditions";
 
 function App() {
-  const location = useLocation();
-  const background = location.state && location.state.background;
-  const { isOpen } = useSelector((state) => state.signInModalState);
-
-  const { stakeModalVisible } = useSelector(
-    (state) => state.stakeModalVisibilityState
-  );
-
-  const { bottomMenuModalOpen } = useSelector(
-    (state) => state.bottomMenuModalState
-  );
-  const shouldbottomModalRender = useDelayUnmount(bottomMenuModalOpen, 260);
-  const { isRegisterModalOpen } = useSelector(
-    (state) => state.registerModalState
-  );
-  const shouldSignModalRender = useDelayUnmount(isOpen, 300);
-  const shouldRegisterModalRender = useDelayUnmount(isRegisterModalOpen, 300);
-
-  useEffect(() => {
-    if (
-      location.pathname === "/privacy-policy" ||
-      location.pathname === "/faq" ||
-      isOpen ||
-      isRegisterModalOpen ||
-      shouldbottomModalRender ||
-      stakeModalVisible
-    ) {
-      document.body.style.overflowY = "hidden";
-    } else {
-      document.body.style.overflowY = "scroll";
-    }
-  }, [
-    location.pathname,
-    isRegisterModalOpen,
-    isOpen,
-    shouldbottomModalRender,
-    stakeModalVisible,
-  ]);
+  console.log("re rendering");
 
   return (
     <>
-      {shouldRegisterModalRender && (
-        <RegisterModal
-          className={isRegisterModalOpen ? "fade-in" : "fade-out"}
-        />
-      )}
-
-      {shouldSignModalRender && (
-        <SignInModal className={isOpen ? "fade-in" : "fade-out"} />
-      )}
-
-      {stakeModalVisible && <StakeModal />}
-
-      {shouldbottomModalRender &&
-        ReactDOM.createPortal(
-          <BottomMenuModal
-            className={bottomMenuModalOpen ? "fade-in" : "fade-out"}
-            drawerClassName={
-              bottomMenuModalOpen ? "drawer-fade-in" : "drawer-fade-out"
-            }
-          />,
-          document.getElementById("modals")
-        )}
-
-      <BackToTopButton />
-
+      <ScrollHiderConditions />
       <div>
         <ScrollToTop />
-        <Routes location={background || location}>
+        <Routes>
           <Route index element={<HomePage />} />
           <Route path="affiliate" element={<Affiliates />} />
           <Route path="about-us" element={<AboutUs />} />
@@ -193,16 +124,7 @@ function App() {
           <Route path="live" element={<EventView />} />
         </Routes>
 
-        {background && (
-          <>
-            <Routes>
-              <Route path="faq" element={<FAQ />} />
-            </Routes>
-            <Routes>
-              <Route path="privacy-policy" element={<PrivacyPolicy />} />
-            </Routes>
-          </>
-        )}
+        <ModalPage />
       </div>
     </>
   );

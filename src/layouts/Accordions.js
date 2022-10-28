@@ -24,26 +24,26 @@ function Accordions() {
       <div className="container-wrapper">
         <Accordion title="ABOUT">
           <div className="space-y-3 mb-4">
-            <Anchor to="/about-us" title="About us" />
-            <Anchor to="/affiliate" title="Affiliation" />
+            <Anchor to="about-us" title="About us" />
+            <Anchor to="affiliate" title="Affiliation" />
           </div>
         </Accordion>
         <Accordion title="HELP">
           <div className="space-y-3 mb-4">
-            <Anchor to="/faq" title="FAQ" state={{ background: location }} />
+            <Anchor to="faq" title="FAQ" state={{ background: location }} />
           </div>
         </Accordion>
         <Accordion title="REDULATIONS">
           <div className="space-y-3 mb-4">
             <Anchor
-              to="/privacy-policy"
+              to="privacy-policy"
               title="Privacy Policy"
               state={{ background: location }}
             />
           </div>
         </Accordion>
         <Accordion title="STATISTICS">
-          <Anchor to="/results" title="Results" />
+          <Anchor to="results" title="Results" />
         </Accordion>
       </div>
     </div>
