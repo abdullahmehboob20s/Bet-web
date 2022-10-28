@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "pages/HomePage";
 import EventView from "pages/Live/EventView";
 import Sports from "pages/Sports";
@@ -38,8 +38,6 @@ import ModalPage from "layouts/ModalPage";
 import ScrollHiderConditions from "components/ScrollHiderConditions";
 
 function App() {
-  console.log("re rendering");
-
   return (
     <>
       <ScrollHiderConditions />
