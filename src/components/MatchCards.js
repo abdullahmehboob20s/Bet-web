@@ -1,9 +1,52 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AccordionButton from "./AccordionButton";
 import MatchAccordion from "./MatchAccordion";
 
 function MatchCards() {
   const [open, setOpen] = useState(true);
+  const [items, setItems] = useState([
+    { title: "Match Result", twoColumns: false, open: true, titles: [] },
+    { title: "Double Chance", twoColumns: false, open: true, titles: [] },
+    {
+      title: "Rest Of The Match (Current Score: 1-0)",
+      twoColumns: true,
+      open: true,
+      titles: ["Over", "Under"],
+    },
+    { title: "Match Result", twoColumns: false, open: true, titles: [] },
+    {
+      title: "Double Chance",
+      twoColumns: false,
+      open: true,
+      titles: ["Over", "Under", "Over"],
+    },
+    {
+      title: "Rest Of The Match (Current Score: 1-0)",
+      twoColumns: false,
+      open: true,
+      titles: [],
+    },
+    {
+      title: "Match Result",
+      twoColumns: true,
+      open: true,
+      titles: ["Over", "Under"],
+    },
+    { title: "Double Chance", twoColumns: false, open: true, titles: [] },
+    {
+      title: "Rest Of The Match (Current Score: 1-0)",
+      twoColumns: false,
+      open: true,
+      titles: [],
+    },
+    {
+      title: "Match Result",
+      twoColumns: true,
+      open: true,
+      titles: ["Over", "Under"],
+    },
+    { title: "Double Chance", twoColumns: false, open: true, titles: [] },
+  ]);
 
   return (
     <div className="space-y-1">
@@ -14,17 +57,14 @@ function MatchCards() {
         AccordionSetter={setOpen}
       />
 
-      {new Array(10).fill("").map(() => (
-        <>
-          <MatchAccordion open={open} title="Match Result" />
-          <MatchAccordion open={open} title="Double Chance" />
-          <MatchAccordion
-            open={open}
-            title="Rest Of The Match (Current Score: 1-0)"
-            twoColumns={true}
-            titles={["Over", "Under"]}
-          />
-        </>
+      {items.map((item, index) => (
+        <MatchAccordion
+          key={index}
+          open={open ? true : false}
+          title={item.title}
+          twoColumns={item.twoColumns}
+          titles={item.titles}
+        />
       ))}
     </div>
   );

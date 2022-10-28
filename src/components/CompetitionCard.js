@@ -32,6 +32,10 @@ function CompetitionCard({
     }
   }, [isAccordionOpen]);
 
+  useEffect(() => {
+    setIsAccordion(open ? true : false);
+  }, [open]);
+
   return (
     <div className={className}>
       <AccordionButton
