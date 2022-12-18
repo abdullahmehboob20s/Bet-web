@@ -67,13 +67,14 @@ function Navbar(props) {
         <div className="px-1 pr-4 flex items-center justify-between w-full">
           <div className="flex items-center space-x-3">
             <Link className="logo" to="/">
-              <img
+              {/* <img
                 className="max-w-[100px]"
                 src="https://cmsbetconstruct.com/storage/medias/vbet/media_4_e78a4ffd98a54aa7f8225fcb13f555ea.gif?v=10/06/2022-16:31"
                 alt=""
-              />
+              /> */}
+              <img className="max-w-[100px]" src="images/logo.png" alt="" />
             </Link>
-            <a
+            {/* <a
               target="_self"
               className="h-6 w-6 block"
               href="/en/?profile=open&amp;account=bonus-journey&amp;page=journeys"
@@ -83,7 +84,7 @@ function Navbar(props) {
                 src="https://cmsbetconstruct.com/storage/medias/vbet/media_4_4ac7eaa91a5473d2e549c9fd4cdaa78e.gif"
                 alt=""
               />
-            </a>
+            </a> */}
           </div>
 
           <div className="flex items-center space-x-3">
