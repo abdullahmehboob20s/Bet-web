@@ -23,9 +23,9 @@ function MatchAccordion({
       arrowClassName="divider-item"
       childrenWrapperClassName="mt-1px"
       ButtonLeftComponent={() => (
-        <button className="text-lg mr-2 flex">
+        <span className="text-lg mr-2 flex">
           <BiStar />
-        </button>
+        </span>
       )}
       ButtonRightComponent={() => (
         <>

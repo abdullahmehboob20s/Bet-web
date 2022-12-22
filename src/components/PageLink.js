@@ -13,7 +13,7 @@ function PageLink({
   Icon,
   sticky = true,
 }) {
-  const [active, setActive] = useState(false);
+  // const [active, setActive] = useState(false);
 
   return (
     <NavLink
@@ -22,7 +22,7 @@ function PageLink({
       target={target}
       style={{ backgroundColor: bg }}
       className={({ isActive }) => {
-        setActive(isActive);
+        // setActive(isActive);
 
         return `${className} h-full flex items-center justify-center  tracking-[.1em] relative before:content-[''] z-50 before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:w-full before:h-2px whitespace-nowrap ${
           isActive
@@ -33,11 +33,13 @@ function PageLink({
         }`;
       }}
     >
-      <span className="relative text-inherit">
-        {title && title}
-        {Icon && <Icon isActive={active} />}
-        {count && <span className={countClassName}>{count}</span>}
-      </span>
+      {({ isActive }) => (
+        <span className="relative text-inherit">
+          {title && title}
+          {Icon && <Icon isActive={isActive} />}
+          {count && <span className={countClassName}>{count}</span>}
+        </span>
+      )}
     </NavLink>
   );
 }

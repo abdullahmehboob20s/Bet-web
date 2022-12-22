@@ -72,12 +72,13 @@ function MatchNavbarDropdown() {
             timeout={400}
             classNames="match-dropdown"
             unmountOnExit
+            nodeRef={menuRef}
           >
             <div
               ref={menuRef}
-              className="fixed top-[18%] left-0 flex justify-center w-[100%] transition-all duration-[.3s] z-[400]"
+              className="fixed top-[18%] left-1/2 -translate-x-1/2 flex justify-center w-[90%] transition-all duration-[.3s] z-[400]"
             >
-              <div className="space-y-1 rounded h-[50vh] bg-b p-7px overflow-y-auto w-[90%]">
+              <div className="space-y-1 rounded h-[50vh] bg-b p-7px overflow-y-auto w-[100%]">
                 <CompetitionCard
                   title="ATP Challenger Playford - Hard"
                   countryName="europe"

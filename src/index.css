@@ -643,19 +643,19 @@
 /* MATCH DROPDOWN */
 
 .match-dropdown-enter {
-  transform: translateY(6%);
+  transform: translateY(6%) translateX(-50%);
   transition: all 300ms ease;
   opacity: 0;
 }
 .match-dropdown-enter-active {
-  transform: translateY(0%);
+  transform: translateY(0%) translateX(-50%);
   opacity: 1;
   transition: all 300ms ease;
 }
 .match-dropdown-exit {
 }
 .match-dropdown-exit-active {
-  transform: translateY(-6%);
+  transform: translateY(-6%) translateX(-50%);
   transition: all 300ms ease;
   opacity: 0;
 }
